@@ -1,0 +1,21 @@
+---
+title: "3.3.1.3. Distribution de la population"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-3-population-distribution-grid.qmd
+    icon: translate
+---
+
+AccessMod nécessite une couche au format raster contenant la répartition de la population cible pour la zone d'étude afin d'effectuer l'analyse de couverture géographique, celle de la mise à l'échelle, ainsi que pour utiliser l'outil de statistiques zonales. Les valeurs de population de raster peuvent être stockés sous forme de nombres entiers ou de nombres à virgule flottante.
+
+Les meilleurs résultats seront obtenus en utilisant une raster dans laquelle les petites localités peuplées, telles que les villages, sont représentées sous forme de cellules uniques, tandis que la population vivant dans les grandes localités peuplées, telles que les villes, est répartie sur toute l'étendue géographique de ces grandes localités. Un exemple d'une telle approche est présenté dans Black *et al.* (2004).
+
+Veuillez noter que la plupart du temps, ces jeux de données sur la répartition de la population ne sont généralement pas disponibles. Dans ce cas, il est possible d’utiliser des ensembles de données basés sur des données de recensement telles que celles partagées dans le cadre de projets tels que WorldPop (<http://www.worldpop.org.uk/>) ou le *[Gridded Population of the World ]{.c-blue}*[(GPW, ]{.c-blue}[[<http://sedac.ciesin.columbia.edu/data/collection/gpw-v3>]{.underline}).]{.c-blue}
+
+::: callout-warning
+**Dans AccessMod, les zones *NoData* (par exemple, les masses d’eau) doivent être considérées comme non peuplées. Par conséquent, la grille de répartition de la population doit être cohérente avec les zones *NoData* indiquées dans la couche d'occupation du sol fusionnée (voir la section suivante, 3.3.1.4).**
+
+**Si de la population reste dans les cellules *NoData*, un message d'avertissement apparaîtra dans AccessMod. L’utilisateur peut quand même décider de lancer l’analyse (il manquera donc de la population qui «échappera» virtuellement à l’analyse) ou d’utiliser l’outil «Correction de la population sur les barrières» (voir section 5.7).**
+
+**L'analyse de la couverture géographique génère un raster montrant les cellules de population situées au-dessus des barrières. Cela permet aux utilisateurs de localiser plus facilement ces cellules et de les corriger si nécessaire dans leur logiciel SIG.**
+:::

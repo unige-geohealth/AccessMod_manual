@@ -1,0 +1,146 @@
+---
+title: "9.1. Installation de Docker desktop"
+other-links:
+  - text: "English version"
+    href: ../en/9-1-installation-of-docker-desktop.qmd
+    icon: translate
+---
+
+------------------------------------------------------------------------
+
+## Sous Windows {#id-9-1-installationdedockerdesktop-souswindows}
+
+#### Conditions requises {#id-9-1-installationdedockerdesktop-conditionsrequises}
+
+1.  La version Windows :\
+    1.  Windows 11 64 bits : Home ou Pro version 21H2 ou supérieure.
+    2.  Windows 10 64 bits : Home ou Pro 21H1 (build 19043) ou supérieur.
+    3.  Vérifiez en ouvrant le **menu Windows**, puis tapez : "*Informations du système*" et cherchez dans la ligne de la **version**, vous y trouverez le numéro de construction. Mettez à jour Windows si nécessaire.
+2.  Activez le backend WSL 2 (Windows Subsystem for Linux) :
+    1.  Dans le terminal **PowerShell**, tapez : `wsl --install -d ubuntu-20.04 `Cela va installer le sous-système Windows pour Linux avec la distro Ubuntu 20.04.
+    2.  Après l'installation de WSL, il sera nécessaire de redémarrer votre ordinateur. Ensuite,  il y aura un court processus d'installation et d'activation qui vous demandera de définir un nom d'utilisateur et un mot de passe administrateur.
+3.  Votre système doit avoir au moins 4 Go de RAM
+4.  La virtualisation hardware doit être active dans le BIOS.\
+    1.  Entrez dans le BIOS au démarrage et accédez-y aux configurations du CPU, puis activez la virtualisation (par exemple VT-x, AMD-V, SVM, Vanderpool).
+    2.  Ouvrez le menu Windows et tapez "*Activer ou désactiver les fonctionnalités Windows*". Vérifiez que les options "*Virtual Machine Platform*" et "*Windows Subsystem for Linux*" sont sélectionnées.
+
+Pour plus de détails, veuillez consulter le site <https://learn.microsoft.com/en-us/windows/wsl/install-manual>
+
+#### Installation {#id-9-1-installationdedockerdesktop-installation}
+
+1.  Téléchargez Docker pour Windows (<https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe>)
+2.  Exécutez le fichier `Docker Desktop Installer.exe` pour installer le logiciel comme d'habitude.
+3.  Si la condition 2. ci-dessus n'a pas été remplie ou n'a pas bien fonctionné, il est possible que, pendant l'installation, Docker demande d'installer les composants WSL 2. Veuillez sélectionner cette option (image uniquement disponible en anglais).\
+    \
+    ![](files/4331596/docker-installation-01.png)
+
+[**Remarque :** si un avertissement du pare-feu demande d'autoriser Docker à se connecter à des réseaux privés et/ou publics, veuillez autoriser les deux connexions.\
+]{.c-orange}
+
+Pour plus de détails, veuillez consulter le site <https://docs.docker.com/desktop/install/windows-install/>
+
+## Sous Apple {#id-9-1-installationdedockerdesktop-sousapple}
+
+### Pour Mac (Intel) {#id-9-1-installationdedockerdesktop-pourmac-intel}
+
+#### Conditions requises {#id-9-1-installationdedockerdesktop-conditionsrequises-1}
+
+-   MacOS doit être la version 10.15 ou plus récente. C'est-à-dire, Catalina, Big Sur, ou Monterey.
+-   [Si vous avez **VirtualBox**]{.c-orange} avec une version inférieure à 4.3.30, vous devez le désinstaller ou le mettre à jour.
+
+#### Installation {#id-9-1-installationdedockerdesktop-installation-1}
+
+1.  Téléchargez Docker pour Mac (Intel): <https://desktop.docker.com/mac/main/amd64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-amd64>
+2.  Installez le fichier `Docker.dmg` comme pour toute autre application, et acceptez le contrat d'abonnement.
+
+### For Mac (M1) {#id-9-1-installationdedockerdesktop-formac-m1}
+
+#### Conditions requises {#id-9-1-installationdedockerdesktop-conditionsrequises-2}
+
+-   Pour obtenir une expérience optimale, Docker recommande d'installer Rosetta 2. Pour installer Rosetta 2, ouvrez le Terminal et tapez :  `softwareupdate --install-rosetta`
+
+#### Installation {#id-9-1-installationdedockerdesktop-installation-2}
+
+1.  Téléchargez Docker pour Mac (M1 chip): <https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-arm64>
+2.  Installez le fichier `Docker.dmg` comme pour toute autre application, et acceptez le contrat d'abonnement.
+
+Pour plus de détails, veuillez consulter le site <https://docs.docker.com/desktop/install/mac-install/>
+
+## Sous Linux {#id-9-1-installationdedockerdesktop-souslinux}
+
+Cet exemple utilise la distro Ubuntu. Pour des instructions spécifiques sur d'autres distros, veuillez visiter : <https://docs.docker.com/desktop/install/linux-install/>
+
+#### Conditions requises {#id-9-1-installationdedockerdesktop-conditionsrequises-3}
+
+-   Disposez d'une version 64 bits d'Ubuntu Jammy Jellyfish 22.04 (LTS) ou d'Ubuntu Impish Indri 21.10. Docker Desktop est pris en charge sur l'architecture `x86_64`{.language-plaintext .highlighter-rouge} (or `amd64`{.language-plaintext .highlighter-rouge}).
+-   Pour les environnements non-Gnome Desktop, gnome-terminal doit être installé :
+
+``` applescript
+sudo apt install gnome-terminal
+```
+
+#### Installation {#id-9-1-installationdedockerdesktop-installation-3}
+
+⚠️ [**IMPORTANT : **]{.c-orange}**Docker Desktop pour Linux fonctionne sur une machine virtuelle (VM). Cela signifie que les images et les conteneurs déployés sur le moteur Docker Linux (avant l'installation) ne sont pas disponibles dans Docker Desktop pour Linux.**
+
+Ces instructions sont une version simplifiée, étape par étape, des commandes requises pour installer Docker à partir du terminal. Pour plus de détails et des commandes supplémentaires, consultez les instructions détaillées.
+
+Désinstallez la version tech preview ou beta de Docker Desktop :
+
+``` applescript
+sudo apt remove docker-desktop
+```
+
+Pour un nettoyage complet, supprimez les fichiers de configuration et de données dans `$HOME/.docker/desktop`, le lien symbolique dans `/usr/local/bin/com.docker.cli`, et purgez les fichiers de service système restants avec :
+
+``` applescript
+rm -r $HOME/.docker/desktop sudo rm /usr/local/bin/com.docker.cli sudo apt purge docker-desktop
+```
+
+##### Configurez le référentiel {#id-9-1-installationdedockerdesktop-configurezlereferentiel}
+
+Mise à jour de l'index des paquets apt et des paquets d'installation pour permettre à apt d'utiliser un dépôt sur HTTPS :
+
+``` applescript
+sudo apt-get update sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release
+```
+
+Ajoutez la clé GPG officielle de Docker :
+
+``` applescript
+sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+Configurez le référentiel :
+
+``` applescript
+echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+##### Installez Docker {#id-9-1-installationdedockerdesktop-installezdocker}
+
+Téléchargez le dernier paquet DEB depuis <https://docs.docker.com/desktop/install/linux-install/>.
+
+Mettez à jour l'index du paquet :
+
+``` applescript
+sudo apt-get update
+```
+
+Naviguez vers le dossier où le fichier est stocké, par exemple :
+
+``` text
+cd Downloads
+```
+
+Exécutez la commande `sudo apt-get install ./` en écrivant ensuite le *nom* exact et *l'extension* du fichier téléchargé, par exemple :
+
+``` applescript
+sudo apt-get install ./docker-desktop-4.14.1-amd64.deb
+```
+
+Lancez Docker avec :
+
+``` applescript
+systemctl --user start docker-desktop
+```

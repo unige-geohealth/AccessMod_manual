@@ -1,0 +1,14 @@
+---
+title: "5.2. AccessMod features"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-2-fonctionnalites-accessmod.qmd
+    icon: translate
+---
+
+
+
+## In this section
+
+- [5.2.1. AccessMod window, modules, panels and sections](5-2-1-accessmod-window-modules-panels-and-sections.qmd)
+- [5.2.2. Tags and operating buttons](5-2-2-tags-and-operating-buttons.qmd)

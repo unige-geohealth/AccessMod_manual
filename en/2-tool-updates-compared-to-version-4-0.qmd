@@ -1,0 +1,30 @@
+---
+title: "2. Tool updates compared to version 4.0"
+other-links:
+  - text: "Version française"
+    href: ../fr/2-mise-a-jours-par-rapport-a-la-version-4.qmd
+    icon: translate
+---
+
+Compared to version 4.0, AccessMod 5.x:
+
+1.  Is packaged as a stand-alone open source application that can not only run on different platforms (Windows, Linux, Mac) through the use of a virtual machine (VirtualBox) but also consumes geospatial data created by different GIS software (ArcGIS, QGIS, GRASS,...);
+2.  Includes not only the tools and analysis that were present in version 4.0 but also additional ones allowing performing more analysis and simplifying the work of the user. The complete set of tools and analysis included in version 5.x is as follow:
+    1.  [Analysis]{.underline}:
+        1.  [Accessibility analysis]{.underline}: Compute the spatial distribution of travel time to or from the nearest health facility(ies) considered in the analysis and this for a specified maximum travel time.
+        2.  [Geographic coverage analysis:]{.underline} Takes into account the availability of services (capacity of the health facility to attended patients) in addition to the physical accessibility constraints to define the extent of the catchment area associated to each health facility
+        3.  [Referral analysis]{.underline}: Compute the travelling times and/or the distances along the least-cost paths between two groups of health centers
+    2.  [Zonal statistics:]{.underline} Obtain the population accessibility coverage at the level of the zones that have been uploaded in the project
+    3.  [Scaling up analysis:]{.underline} Test different scenarios aiming at scaling up an existing service delivery network or establishing a new one
+    4.  [Tools:]{.underline}
+        1.  [Raster preview]{.underline}: Allows viewing and querying the raster format layers included in the project;
+        2.  [Merge Land cover]{.underline}: Creates the raster format land cover layer used in AccessMod by merging the road network, the hydrographic (water body) network and background land cover layers together;
+        3.  [Correct for population on barriers]{.underline}: Allow adjusting the target population layer to avoid for this population to be placed on barriers.
+3.  Uses a significantly improved method for the creation of the merged land cover layer, including the possibility to automatically clean artefacts created when a road finds itself too close to a barrier (e.g. a river);
+4.  Contains a completely redesigned module for scaling up analysis, with a multi-criteria approach allowing one to create realistic rule-based models;
+5.  Improves substantially the computational speed for referral analyses, by adopting a distributed computation approach making full use of the number of available processors on the user machine.
+6.  Provides the users with:
+    1.  More flexibility when it comes to data input and analysis settings;
+    2.  Overall improved performance and speed for the different analyses.
+
+------------------------------------------------------------------------

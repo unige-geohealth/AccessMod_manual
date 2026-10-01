@@ -1,0 +1,15 @@
+---
+title: "3.3.1.5. Zones d'exclusion"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-5-exclusion-areas.qmd
+    icon: translate
+---
+
+L'analyse de mise à l'échelle permet aux utilisateurs de prendre en compte les zones où une partie de la population cible vit peut-être mais où les installations de santé ne peuvent pas ou ne devraient pas être situées. Des exemples de telles zones peuvent inclure des zones côtières basses exposées à des inondations/tempêtes ou des tsunamis, des parcs nationaux, des zones militaires, etc.
+
+L'étendue des zones d'exclusion est stockée dans un jeu de données au format vectoriel ou raster. Dans ce jeu de données, les polygones ou les cellules faisant partie des zones d'exclusion doivent être classés avec une valeur entière (par exemple, "1"), tandis que les zones non exclues doivent être classées comme *NoData*.
+
+::: callout-warning
+**Une partie de la population cible pourrait vivre dans des zones d’exclusion ou les traverser. Cette population ainsi que leurs mouvements seront pris en compte lors de l'analyse et seront donc rattachés aux aires de captage des installations existantes, mais aucune nouvelle structure ne sera trouvée dans ces zones.**
+:::

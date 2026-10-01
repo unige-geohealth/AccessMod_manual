@@ -1,0 +1,84 @@
+---
+title: "Appendix 2 - Maximum population coverage capacity of health facilities"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-2-capacite-de-couverture-maximale-de-la-population-des-structur.qmd
+    icon: translate
+---
+
+The geographic coverage analysis module of AccessMod allows for the integration of the spatial distribution of health services (supply) and of the population (demand) within a same analysis, in order to assess if the facilities that are physically accessible in a given time also have enough capacity to cover such demand.
+
+ In this analysis, the maximum population coverage capacity of each facility is considered as the maximum number of people the service can cover over a particular period of time based on its patient capacity.
+
+ This appendix describes one possible way for calculating a generic (not intervention-specific) maximum population coverage capacity for two types of facilities.
+
+**[ ]{.underline}[1. Concepts]{.underline}**
+
+The maximum population coverage capacity of a health facility corresponds to the population that a specific health facility can serve for a particular intervention, or set of interventions, over a particular period of time (generally a year).
+
+ This concept is extracted from the notion of capacity utilization, which corresponds to the extent to which health facilities are utilized by patients, compared to the total number of patients a health facility could potentially serve. This parameter is the product of two functions:
+
+1.  The frequency at which patients use the service from the health facility,
+2.  The number of patients a health facility can serve.
+
+ The considerations and calculations involved in each function are described separately below.
+
+ ***1.1 Frequency of use***
+
+ In economic terms, this could be characterized as the demand that people have for health services. Demand is a complex function involving many variables, including physical accessibility (the concern of AccessMod), the financial price of health services, the quality of the services provided, the education of the person, etc.
+
+ For purposes of calculating patient demand for health services, we use the average number of visits per person per year. National average number of outpatient visits per person per year, and average number of inpatient admissions, are reported for a wide number of countries in the World Development Indicators (World Bank, 2001). However, national averages reflect the entire population of a country; that is, the average also included people who currently do not have good physical access to health facilities. Thus, a more accurate reflection of health center utilization will be derived from areas of the country that currently do have access to health facilities. To the extent possible, the above mentioned data should also match uncovered areas in terms of income, education, etc.
+
+ For hospitals, it is important to distinguish inpatient admissions by type of hospital. For example, higher-level facilities (e.g., teaching or central hospitals) may take in only special or complicated cases, and have lower inpatient admission rates per capita than a district-level hospital. Admission rates should be multiplied by the average length of stay to determine yearly demand for beds.
+
+ ***1.2 Number of Patients Served at a Health Facility***
+
+ We recommend using the formulas developed in Doherty *et al.* (1996) to determine the number of patients served at a health center.
+
+ To summarize the discussion in this paper, the number of patients a health center can see per year at its standard capacity, equals the number of health workers multiplied by the number of patients seen per health worker per day multiplied by the number of working days in a year.
+
+ However, in areas where there are seasonal diseases, such as malaria, the peak utilization of health centers at a particular time of year may be much higher than the average utilization throughout the year. In this case, the peak utilization rates should be considered rather than the average utilization rates.
+
+ To determine the number of patients served by a hospital, the number of hospital beds is more appropriate than workload per health worker. To determine the capacity of a hospital, the number of beds can be multiplied by the average occupancy rate. This should then be multiplied by the number of working days per year to estimate the total number of bed-days available in one year.
+
+***1.3 Maximum Population Coverage Capacity***
+
+ Having the number of patients served at a health facility, the total population that it can serve can be summarized as:
+
+ Total population served = (# of health workers \* number of patients seen in one average day \* number of days worked per year) / (average number of outpatient visits per capita per year)
+
+In the case of a hospital, this parameter can be summarized as:
+
+ Total population served = (number of beds \* occupancy rate \* \# of working days in year) / (average number of inpatient admittances per capita per year \* average length of stay).
+
+ **[2. Example of calculation of the maximum population coverage capacity for the Malawi sample data set]{.underline}**
+
+[ ]{.underline}***2.1 For health centers***
+
+ We assumed one doctor and one nurse at a rural operational health facility. We assumed that together, these two workers could see 75 patients per day, and worked 236 days per year. The current national average outpatient visits per capita per year is estimated at 2. We increased this to 3 to account for increased physical access. Thus, the formula is:
+
+ (75 patients seen per day \* 236 working days per year) / (3 visits per capita per year) = **5,893**,
+
+ This represents the average total population that can be served by a health center.
+
+***2.2 For hospitals***
+
+ **2.2.1 Primary level (district) hospitals**
+
+ We assumed an average of 109.5 beds at a district hospital, with an 80% occupancy rate. Although inpatient admission rates are not available for Malawi, we derived an estimate of 0.11 total inpatient admissions per capita per year (to all types of hospitals) from other Sub-Saharan Africa countries, with 61% of these admissions in primary level hospitals. To calculate the total patients served:
+
+ (109.5 beds \* 80% occupancy \* 365 days in a year) / (0.11 admissions per capita per year \* 61% of admissions at primary hospitals \* 6.06 average length of stay \[days\]) = **78,632**,
+
+ This represents the average population served by a primary hospital.
+
+**2.2.2 Secondary level hospitals**
+
+ We assumed an average of 331 beds, an average length of stay of 6.26 days, and 27.8% of total inpatient admissions to secondary level hospitals, resulting in the average population served as **505,539**.
+
+**2.2.3 Tertiary level hospitals**
+
+ We assumed an average of 986.5 beds, an average length of stay of 8.2 days, and 11% of total inpatient admissions to secondary level hospitals, resulting in the average population served at **2,875,233**.
+
+Note that these calculations assume an efficient referral system is in place.
+
+------------------------------------------------------------------------

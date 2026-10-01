@@ -1,0 +1,37 @@
+---
+title: "Annexe 4 - Détails du calcul - Analyse de la couverture géographique"
+other-links:
+  - text: "English version"
+    href: ../en/appendix-4-calculation-details-geographic-coverage-analysis.qmd
+    icon: translate
+---
+
+AccessMod utilise le processus suivant lors de l'analyse de la couverture géographique une fois que toutes les données d'entrée et tous les paramètres ont été spécifiés (voir section 5.5.4):
+
+ 1. La liste des structures de santé définies par l'utilisateur est triée en fonction de l'ordre de traitement choisi par l'utilisateur, à savoir:
+
+       i. Basé sur un champ dans la couche des structures de santé. Dans ce cas, les structures de santé sont triées en fonction des valeurs indiquées dans le champ sélectionné.
+
+       ii. Basé sur la population située dans l’aire de captage calculée pour le temps de trajet spécifié. Dans ce cas, une analyse d'accessibilité est lancée pour chaque structure de santé, en utilisant la durée de trajet maximale définie par l'utilisateur. La population de chacune des aires de captage individuelles est extraite, puis les structures de santé sont triées en fonction des valeurs extraites.
+
+       iii. Basé sur la population dans une zone tampon circulaire autour de la structure, spécifiée par le rayon fourni par l'utilisateur. Dans ce cas, une zone tampon circulaire est créée autour de chaque structure de santé en utilisant le rayon défini par l'utilisateur. La population dans chacun des cercles individuels est extraite et les structures de santé sont ensuite triées en fonction des valeurs extraites.
+
+2. Un duplicata de la distribution de la population au format raster d'origine est créé et sera utilisé comme couche pour contenir la distribution spatiale de la population résiduelle.
+
+3\. L'algorithme effectue ensuite les étapes suivantes sur chaque structure de santé de la liste, en respectant l'ordre de tri défini à l'étape 1:
+
+a\. Une analyse d'accessibilité est effectuée (à l'aide de l'algorithme r.walk de GRASS) à l'aide du scénario de déplacement et de la durée de déplacement maximale définie par l'utilisateur. Il en résulte une aire de captage et une grille de distribution des temps de parcours cumulés sur cette même aire de captage.
+
+b\. La grille de distribution des temps de parcours cumulés est utilisée pour effectuer une analyse statistique zonale sur le jeu de données raster de population résiduelle pour chaque minute de temps de parcours cumulé (1, 2, 3, ...), en partant de la structure de santé et en s'étendant vers l'extérieur. Cette étape aboutit à la création d'une table de fréquence contenant la somme cumulée de la population de la structure de santé vers la minute de déplacement considérée (somme minimale à maximale cumulée de la population).
+
+c. La table de fréquence et les règles suivantes sont ensuite utilisés pour déterminer le processus appliqué pour le reste de l'analyse:
+
+             i. Si la capacité de couverture maximale associée à la structure de santé est inférieure à la somme cumulative minimale de la population (c.-à-d. population à moins de 1 minute du temps d’accès - première zone), le processus supprime uniformément la capacité de couverture maximale de la structure de santé de la population résiduelle située dans la zone de captage du temps de trajet de 1 min. La limite de la zone de captage est une coque convexe autour de cette première zone. Il n'y a pas de capacité résiduelle dans ce cas. 
+
+            ii. Si la capacité de couverture maximale de la structure de santé est supérieure à la somme cumulée maximale de population (population comprise dans la durée de trajet maximale définie par l'utilisateur - dernière zone): le processus soustrait la somme cumulée maximale de population de la capacité de couverture maximale et utilise cette valeur pour calculer la capacité de couverture résiduelle de la structure de santé. La limite de l’aire de captage est une coque convexe autour de cette dernière zone et la population résiduelle est fixée à zéro pour toutes les cellules de ce bassin de population. Il y a une capacité résiduelle, dans ce cas.
+
+            iii. Si la capacité de couverture maximale de la structure de santé correspond exactement à l'une des sommes cumulées de la population (c'est-à-dire la population pour une durée de déplacement donnée), le processus fixe la population résiduelle à zéro pour toutes les cellules jusqu'à cette durée de déplacement dans l’aire de captage. La limite du bassin de population est une enveloppe convexe autour de cette zone. Il n'y a pas de capacité résiduelle dans ce cas.
+
+           iv. Si la capacité de couverture maximale associée à la structure de santé est comprise entre la somme cumulée minimale et maximale de la population dans le bassin de population, mais ne correspond pas exactement à la population cumulée pour une minute de temps de parcours donnée, le processus identifie le temps de parcours pour lequel la population cumulée est juste au-dessus de la capacité de couverture maximale de la structure de santé (dernière zone considérée dans ce cas). La population résiduelle est définie à zéro pour toutes les cellules jusqu'à ce temps de trajet particulier, moins 1 min. Dans la dernière zone, le processus supprime uniformément la capacité restante des cellules de population résiduelles. La limite de l’aire de captage, dans ce cas, est l'enveloppe convexe autour de cette dernière zone. Il n'y a pas de capacité résiduelle dans ce cas.
+
+------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+---
+title: "3.3.1.10. Priority areas"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-10-zones-prioritaires.qmd
+    icon: translate
+---
+
+The scaling up analysis allows for the prioritization of some areas over others when identifying the most suitable place to locate a new health facility – so-called Priority areas.
+
+Like for the exclusion areas (see Section 3.3.1.5), these areas can be of different nature. They can, for example, be based on sub national level statistical figures relevant to the analysis being performed (e.g., disease prevalence, mortality rates, poverty level).
+
+Regardless of the boundary type used to define them, such areas have to be stored in a raster format layer containing integer values. Priority areas defined on the basis of vector format layer must be rasterized using the resolution and extend of the DEM (see Section 3.3.1.2) before being imported in AccessMod.

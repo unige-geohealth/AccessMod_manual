@@ -1,0 +1,25 @@
+---
+title: "5.4.4. Archiver et exporter les données"
+other-links:
+  - text: "English version"
+    href: ../en/5-4-4-archive-and-export-the-data.qmd
+    icon: translate
+---
+
+La section "Archive" est utilisée pour compresser (zip) les données avant l'exportation et les exporter sur votre machine.
+
+Pour faire cela:
+
+1.  Cochez les données que vous souhaitez compresser dans la colonne "Select" de la table "Données disponibles"
+2.  Cliquez sur le bouton "Créer l'archive" qui devrait être gris
+
+AccessMod compressera ensuite le(s) fichier(s) sélectionné(s) et préparera le fichier zip pour l'exportation depuis la VM. La structure du nom de fichier en cours de création est la suivante et correspond à la date et à l'heure de création du fichier par AccessMod):
+
+*am5_annee_mois_jour_heure_min_sec.zip*
+
+Veuillez noter que:
+
+-   Chaque élément de données sélectionné dans la table de données disponible sera stocké dans un dossier séparé dans le fichier zip résultant.
+-   L'heure capturée dans le nom du fichier zip doit correspondre à l'heure spécifiée dans les paramètres de votre ordinateur.
+
+Pour lancer l'exportation, sélectionnez ensuite le fichier zip que vous souhaitez exporter dans le menu déroulant, puis cliquez sur le bouton «Exporter l'archive». Notez que la dernière archive créée apparaît en haut du menu et est sélectionnée par défaut. Suivant les configurations de votre navigateur, il pourrait vous être demandé de spécifier l'endroit où sauver votre archive, ou alors l'archive se téléchargera dans votre dossier de téléchargement par défaut.

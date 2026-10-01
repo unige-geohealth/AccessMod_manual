@@ -1,0 +1,26 @@
+---
+title: "3.3.1.4. Land cover distribution grid"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-4-occupation-du-sol.qmd
+    icon: translate
+---
+
+Two different land cover grids are considered in AccessMod:
+
+1.  The original land cover grid containing the broad land cover types such as forest, build areas, large water bodies, agriculture fields, plains, etc.
+2.  The final merged land cover grid which is generated using the merge land cover tool of AccessMod (see Section 5.5.2) and that also includes the roads and the barriers to movements (e.g. large rivers, lakes,…).
+
+The original land cover grid holds information on the types of land cover (and their spatial arrangements) that characterize the area of analysis and that are believed to affect the travelling time of patients moving across this area.
+
+This grid must contain **integer values**, with each value corresponding to one land cover class (land cover IDs). These land cover IDs are then linked to corresponding travel speed through the travelling scenario table (see section 3.3.2.2). Starting with version 5.6.8, AccessMod will automatically convert an imported landcover data set with floating point values into their corresponding integer values. 
+
+To facilitate the integration of the roads and barriers into the final land cover distribution grid, AccessMod offers a module (see section ‎5.5.2) that facilitates this process.
+
+The merged land cover grid is typically constructed only once. Further alternative scenarios of travel (various speeds and/or modes of transportation) can be easily set up using the travelling scenario text file. This being said, it is possible to create different merged land cover layers to simulate the impact of flooding or the construction of a new road.
+
+::: callout-warning
+**"No Data" cells in the merged land cover grids are considered as cells in which movement is not possible. **
+
+**It is recommended that users directly classify areas over which no movement is expected, as well as areas located outside of the study area, as "No data" before importing the land cover layer in AccessMod. This will not only reduce the computation time, but also reduce the number of classes to be managed during the application of AccessMod. However, note that the integration of the road network on top of barriers (rivers for example) within the merged land cover layer will result in the creation of bridges and therefore reclassify the concerned "No Data" cells into the corresponding road class.**
+:::

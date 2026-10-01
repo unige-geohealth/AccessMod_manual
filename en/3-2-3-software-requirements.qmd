@@ -1,0 +1,17 @@
+---
+title: "3.2.3. Software Requirements"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-2-3-pre-requis-logiciel.qmd
+    icon: translate
+---
+
+[Web browser]{.underline}
+
+AccessMod uses a web browser for its user interface. This web browser connects to the virtual machine and all user inputs are done through the web browser.
+
+We recommend you use the Chrome web browser from Google ([<https://www.google.com/chrome/>]{.underline}) to get the best performance. However, AccessMod has also been successfully tested on Firefox, Safari, and Internet Explorer. Ensure that you have installed the latest version of the browser.
+
+[VirtualBox]{.underline}
+
+To run AccessMod, you need the virtual machine manager, VirtualBox ([<https://www.virtualbox.org>]{.underline}). VirtualBox is a free and open-source software that can run on any operating system.

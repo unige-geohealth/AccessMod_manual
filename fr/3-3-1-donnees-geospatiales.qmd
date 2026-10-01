@@ -1,0 +1,48 @@
+---
+title: "3.3.1. Données géospatiales"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-geospatial-data.qmd
+    icon: translate
+---
+
+Cette section aborde d’abord les problèmes importants à traiter lors de la préparation des données géospatiales en vue de leur utilisation dans AccessMod 5 (unités de la carte, projection et résolution). Ensuite, les différents ensembles de données géospatiales nécessaires à l’utilisation d’AccessMod sont décrits plus en détail.
+
+Contrairement aux versions précédentes, les données géospatiales importées dans AccessMod peuvent être créées par différents logiciels SIG. Les fichiers à sélectionner lors du processus d'importation diffèrent en fonction du format de stockage des données géospatiales, comme indiqué dans le tableau suivant:
+
+Tableau des formats de données géospatiales pris en charge:
+
+|  |  |  |  |
+|----|----|----|----|
+| **Format** | **Mode de stockage** | **Extension de fichier** | **Fichier multiple** |
+| HFA -- ERDAS Imagine | Raster | .img | Non |
+| Tagged Image File Format (TIFF) | Raster | .tiff, .tif | Non |
+| Shapefile | Vecteur | .shp,.dbf,.prj,.shx | Oui^1^ |
+| SpatiaLite^2^ | Vecteur | .sqlite | Non |
+| AIG -- Arc/Info Binary Grid | Raster | .adf | Oui^3^ |
+
+^1 ^Au moins les fichiers avec extension .shp, .prj, .dbf et .shx. Exemple: road.shp, road.prj, road.dbf et road.shx
+
+^2 ^<https://en.wikipedia.org/wiki/SpatiaLite>
+
+^3 ^Au moins les fichiers avec extension .adf. Exemple: prj.adf, w001001.adf et hdr.adf
+
+Bien que différents formats de fichier puissent être importés dans AccessMod, le format des données géospatiales exportées à partir d'AccessMod est le suivant:
+
+-   Couche de format raster: ERDAS Imagine (.img)
+-   Couche de format vectoriel: Shapefile (shp, .dbf, .prj, .shx)
+
+Les formats des données exportées peuvent être utilisés dans la plupart des logiciels SIG actuellement disponibles sur le marché.
+
+## Contenu de cette section
+
+- [3.3.1.1. Unités, projection, étendue, résolution et problèmes de précision](3-3-1-1-unites-projection-etendue-resolution-et-problemes-de-precision.qmd)
+- [3.3.1.2. Modèle numérique d'altitude - Digital Elevation Model (DEM)](3-3-1-2-modele-numerique-d-altitude-digital-elevation-model-dem.qmd)
+- [3.3.1.3. Distribution de la population](3-3-1-3-distribution-de-la-population.qmd)
+- [3.3.1.4. Occupation du sol](3-3-1-4-occupation-du-sol.qmd)
+- [3.3.1.5. Zones d'exclusion](3-3-1-5-zones-d-exclusion.qmd)
+- [3.3.1.6. Localisation des structure de santé](3-3-1-6-localisation-des-structure-de-sante.qmd)
+- [3.3.1.7. Réseau routier](3-3-1-7-reseau-routier.qmd)
+- [3.3.1.8. Barrières aux mouvements](3-3-1-8-barrieres-aux-mouvements.qmd)
+- [3.3.1.9. Limites des zones](3-3-1-9-limites-des-zones.qmd)
+- [3.3.1.10. Zones prioritaires](3-3-1-10-zones-prioritaires.qmd)

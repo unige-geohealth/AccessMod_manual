@@ -1,0 +1,25 @@
+---
+title: "AccessMod 5"
+page-layout: full
+toc: false
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### User manual (English)
+
+This is the user manual in English for AccessMod version 5.
+
+[Open the manual](en/index.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Manuel de l'utilisateur (français)
+
+Manuel de l'utilisateur d'AccessMod version 5 en français.
+
+[Ouvrir le manuel](fr/index.qmd){.btn .btn-primary}
+:::
+
+:::

@@ -1,0 +1,27 @@
+---
+title: "1. Introduction"
+other-links:
+  - text: "English version"
+    href: ../en/1-introduction.qmd
+    icon: translate
+---
+
+L'objectif du développement durable n° 3 (ODD 3) vise à garantir des vies saines et à promouvoir le bien-être de tous à tout âge. Cela implique un système de santé performant fournissant des soins préventifs et curatifs. La mise en place d'un réseau d'infrastructures à travers laquelle des services de soins de santé de qualité peuvent être fournis est une exigence de base lors de la transition vers la couverture sanitaire universelle (CSU). S'assurer que les services de santé sont disponibles, accessibles et répondent aux besoins des individus et des communautés a un impact direct sur les résultats des interventions en santé
+
+AccessMod est une boîte à outils développée pour aider les pays à examiner les aspects géographiques de leur système de santé. Il aborde spécifiquement les trois premiers éléments d'un cadre bien connu, développé par Tanahashi (1978), pour évaluer la couverture des services de santé (les trois éléments spécifiques étant: la population cible, la couverture de disponibilité et la couverture d'accessibilité). En évaluant à quel point le système de santé actuel est physiquement accessible, AccessMod permet d'identifier les lacunes et les faiblesses pour atteindre les populations cibles. En outre, AccessMod permet de tester différentes options visant à étendre (mise à l'échelle) le réseau de prestation de soins de santé existant afin d'élargir la couverture de la population, soutenant ainsi directement les processus de planification et éclairant la mise en œuvre des politiques soutenant la CSU et l'ODD 3.
+
+Plus spécifiquement, AccessMod utilise les possibilités d'intégration des données géographiques, ainsi que les capacités visuelles et analytiques des systèmes d'information géographique (SIG) pour:
+
+1.  Évaluer dans quelle mesure les services de santé existants sont physiquement accessibles à la population cible - Analyse de l'accessibilité physique
+2.  Estimer la proportion de la population cible qui aurait un accès physique aux installations existantes mais ne pourrait pas recevoir de soins en raison d'un manque de capacités humaines ou matérielles des structures de santé - Analyse de la couverture géographique
+3.  Mesurer le temps de trajet et les distances entre les établissements de santé pour estimer, par exemple, le temps requis pour être référé vers une structure de niveau supérieur ou pour livrer des intrants à une structure - Analyse de la référence
+4.  Identifiez la couverture d'accessibilité physique (c'est-à-dire le pourcentage de la population ayant un accès physique aux services de santé étant donné un temps de voyage maximum) au niveau sous-national et ceci pour différentes durées de voyage maximum spécifiées par l'utilisateur - Statistiques zonales
+5.  Concevoir et simuler différents scénarios visant à la mise à l'échelle du réseau de prestation de services existant afin d'accroître la couverture de la population - Analyse de la mise à l'échelle
+
+AccessMod repose sur un algorithme basé sur les chemins à moindre coût et une surface de coût accumulative qui permet de délimiter les zones de captage (voir Ray et Ebener (2008) pour plus de détails).
+
+Ce document contient les informations nécessaires à l’installation et à l’utilisation d'AccessMod version 5.x. De plus, le chapitre 5 de ce document est un tutoriel complet pour apprendre à utiliser la version 5 à partir du jeu de données exemple pour le Malawi.
+
+La préparation des données d'entrée et la manipulation des résultats AccessMod (tels que les jeux de données vectoriels et raster) exigent que l'utilisateur soit déjà familiarisé avec au moins un logiciel SIG (par exemple, QGIS, ArcGIS, GRASS) qui doit être installé sur son ordinateur afin de pouvoir compléter le tutoriel et bénéficier de toutes les fonctionnalités d’AccessMod.
+
+------------------------------------------------------------------------

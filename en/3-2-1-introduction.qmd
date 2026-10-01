@@ -1,0 +1,9 @@
+---
+title: "3.2.1. Introduction"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-2-1-introduction.qmd
+    icon: translate
+---
+
+AccessMod is based on a stack of several open-source libraries, packaged in a virtual machine, which makes it easy to use and install on any desktop computer, without needing to address software dependencies and configurations, licences, fees or operating system (AccessMod 5.x can run under Windows, Mac, Linux,..). From version 5.7.x, AccessMod has been fully "dockerized" and runs through Docker inside the virtual machine, or with Docker installed on the user machine. When up and running. AccessMod 5.x is available as a web application in a browser at this address: http://localhost:8080 [.](http://doc-accessmod.unepgrid.ch)

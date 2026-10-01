@@ -1,0 +1,32 @@
+---
+title: "3.3.2. Données tabulaires et durée maximale de voyage"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-2-tabular-data-and-maximum-travel-time.qmd
+    icon: translate
+---
+
+AccessMod utilise différentes tables pour saisir des paramètres spécifiques dans les différentes analyses.
+
+Ces tables peuvent être créées dans Excel (ou tout autre logiciel tableur), puis importées dans AccessMod ou créées manuellement dans AccessMod. Les formats pris en charge par AccessMod lors de l’importation sont les suivants:
+
+**Tableau des formats de données tabulaires pris en charge**
+
+|  |  |  |  |
+|----|----|----|----|
+| **Format** | **Mode de stockage** | **Extension de fichier** | **Multiple fichiers** |
+| Excel file (Office Open XML) | Table | .xslx | No |
+| Excel file (Binary File Format) | Table | .xls | No |
+| Comma-separated values | Table | .csv | No |
+| Open Document Spreadsheet | Table | .ods | No |
+
+Bien que différents formats puissent être importés dans AccessMod, l’exportation à partir d’AccessMod générera toujours un fichier Excel (.xlsx).
+
+La structure et le contenu de ces différentes tables sont décrits dans les sections suivantes. Nous discuterons ensuite du concept de durée maximale de voyage utilisée pour définir l'étendue maximale des aires de captages calculées par AccessMod.
+
+## Contenu de cette section
+
+- [3.3.2.1. Table de classification de l'occupation du sol](3-3-2-1-table-de-classification-de-l-occupation-du-sol.qmd)
+- [3.3.2.2. Table de scénario de voyage](3-3-2-2-table-de-scenario-de-voyage.qmd)
+- [3.3.2.3. Table d'information des nouvelles structures](3-3-2-3-table-d-information-des-nouvelles-structures.qmd)
+- [3.3.2.4. Temps de voyage maximum](3-3-2-4-temps-de-voyage-maximum.qmd)

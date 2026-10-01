@@ -1,0 +1,11 @@
+---
+title: "5.3.3. Delete a project"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-3-3-supprimer-un-projet.qmd
+    icon: translate
+---
+
+To delete a project, simply select the project name in the drop-down menu of the *“Delete”* section and hit the "delete" button. Beware that this will delete all data that have been imported in the project (i.e. the uploaded data that resides inside the virtual machine) and all data sets created within that project. **The delete action is not reversible.**
+
+ The original data sets stored on your computer and therefore outside the virtual machine will not be affected. Data sets that you have exported from AccessMod (i.e. from the virtual machine) and saved on your hard disk will also not be affected.

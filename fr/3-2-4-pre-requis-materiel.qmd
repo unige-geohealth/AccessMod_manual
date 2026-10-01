@@ -1,0 +1,25 @@
+---
+title: "3.2.4. Pré-requis matériel"
+other-links:
+  - text: "English version"
+    href: ../en/3-2-4-hardware-requirements.qmd
+    icon: translate
+---
+
+La configuration matérielle minimale et recommandée pour exécuter la machine virtuelle est la suivante:
+
+**Configuration minimale:**
+
+Mémoire vive (RAM): 2 GB
+
+Espace disque: 3 GB
+
+Processeur: CPU à 1 cœur
+
+**Configuration recommandée:**
+
+Mémoire vive (RAM): 8 GB
+
+Espace disque: 10 GB
+
+Processeur: CPU à 2 cœurs

@@ -1,0 +1,9 @@
+---
+title: "3.2.1. Introduction"
+other-links:
+  - text: "English version"
+    href: ../en/3-2-1-introduction.qmd
+    icon: translate
+---
+
+AccessMod est basé sur une pile de plusieurs librairies open-source, conditionnées dans une machine virtuelle, ce qui facilite son utilisation et son installation sur tout ordinateur de bureau, sans qu'il soit nécessaire de traiter les dépendances et les configurations logicielles, les licences, les frais ou le système d'exploitation (AccessMod 5 peut fonctionner sous Windows, Mac, Linux, ..). Depuis la version 5.7.x, AccessMod a été entièrement "dockerisé" et s'exécute via Docker à l'intérieur de la machine virtuelle, ou avec Docker installé sur la machine de l'utilisateur. Lorsqu'il est démarré, AccessMod 5 est disponible en tant qu'application Web dans un navigateur à l'adresse suivante: <http://localhost:8080> .

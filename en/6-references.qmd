@@ -1,0 +1,35 @@
+---
+title: "6. References"
+other-links:
+  - text: "Version française"
+    href: ../fr/6-references.qmd
+    icon: translate
+---
+
+Black M., Ebener S., Najera Aguilar P., Vidaurre M., El Morjani Z. (2004): Using GIS to Measure Physical Accessibility to Health Care, *Paper presented during the 2004 ESRI International Health Users conference, Washington DC*.
+
+Doherty, J., Rispel, L. & Webb, N. (1996) : Developing a plan for primary health care facilities in Soweto, South Africa. Part II: Applying locational criteria. Health Policy Plan 1996; 11(4): 394-405).
+
+Eastman R. (1999) Multi-criteria evaluation and GIS. Chapter 35 In: Longley PA, Goodchild MF, Maguire DJ, Rhind DW (eds) *Geographical information systems*, Wiley, New York. pp493-502.
+
+Ebener S. (2016): Guidance for the management and use of geospatial data and technologies in health. Part 2 - Implementing the geospatial data management cycle: 2.2 Defining the vocabulary, the data set specifications and the ground reference. Health GeoLab Collaborative document: <https://www.healthgeolab.net/DOCUMENTS/Guide_HGLC_Part2_2.pdf> \[Accessed October 2018\]
+
+Ebener S., Maude R.J., Gault P. (2018): Guidance for the management and use of geospatial data and technologies in health. Part 2 - Implementing the geospatial data management cycle: 2.4 Creating geospatial data - 2.4.2 Collecting data in the field. Health GeoLab Collaborative document: [www.healthgeolab.net/DOCUMENTS/Guide_HGLC_Part2_4_2.pdf](http://www.healthgeolab.net/DOCUMENTS/Guide_HGLC_Part2_4_2.pdf) \[Accessed October 2018\]
+
+Nelson, A. (2000): Accessibility, transport and travel time information, *CIAT Hillsides Project Report*
+
+Ray N & Ebener S. (2008) AccessMod 3.0: computing geographic coverage and accessibility to health care services using anisotropic movement of patients. *International Journal of Health Geographics* 7: 63
+
+Tanahashi T. (1978): Health service coverage and its evaluation. Bulletin of the World Health Organization, 56 (2); 229-303
+
+Tobler, W. (1993): Three presentations on geographical analysis and modeling, Non isotropic geographic modeling, Speculations on the geometry of geography, Global spatial analysis. *National Center for Geographic Information, University of California, Santa Barbara*
+
+Toxopeus, A.G., (1996): An Interactive Spatial and temporal Modeling system as a tool in ecosystem management, *PhD-thesis, ITC. ITC Publication Nr. 44, ITC, Enschede, The Netherlands,* 250 pp*.*
+
+USAID (2016): Accessibility to EmONC facilities in the State of Cross River, Nigeria: [<http://pdf.usaid.gov/pdf_docs/pa00mdwb.pdf>]{.underline} \[Accessed December 17, 2016\]
+
+World Health Organization (2015): Investing the Marginal Dollar for Maternal and Newborn Health (MNH): Geographic Accessibility Analysis Lao People's Democratic Republic - Final report
+
+World Bank (2001): World Development Indicators 2001, World Bank, Washington, D.C
+
+------------------------------------------------------------------------

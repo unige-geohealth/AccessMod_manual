@@ -1,0 +1,13 @@
+---
+title: "3.2.5. Consommation de RAM et vitesse de calcul"
+other-links:
+  - text: "English version"
+    href: ../en/3-2-5-ram-consumption-and-computational-speed.qmd
+    icon: translate
+---
+
+AccessMod a été développé pour effectuer les différentes analyses le plus rapidement possible. Toutefois, si vous travaillez avec de gros jeux de données, en raison par exemple de la haute résolution des jeux de données raster et/ou d'un nombre élevé de structures de santé, les analyses peuvent prendre beaucoup de temps. En conséquence, il peut sembler que rien ne se passe. Cependant, dans ce cas, si vous ne voyez pas de message d'erreur à l'écran, cela signifie qu'AccessMod devrait toujours être en cours d'exécution en arrière-plan.
+
+Si AccessMod est figé, prend plus de temps que prévu ou se bloque, vous pouvez simplement recharger la page dans votre navigateur. Vous ne perdrez aucune donnée en faisant cela, mais vous risquez de perdre la sélection des paramètres que vous aviez précédemment faite dans l'interface de votre analyse.
+
+Si vous souhaitez effectuer de longues analyses, il est recommandé de vous assurer au préalable qu'une quantité suffisante de mémoire est disponible sur votre ordinateur (recommandation: au moins 8 Go de mémoire). Cependant, c'est la RAM allouée à votre machine virtuelle AccessMod qui compte, ainsi que le nombre de CPU qui lui sont alloués. Reportez-vous à la Section 4.2 pour savoir comment augmenter la RAM et le nombre de CPU de votre VM AccessMod afin d'accélérer les vitesses de calcul.

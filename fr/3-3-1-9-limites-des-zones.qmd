@@ -1,0 +1,15 @@
+---
+title: "3.3.1.9. Limites des zones"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-9-zones-boundaries.qmd
+    icon: translate
+---
+
+L’outil de statistiques zonales (voir section 5.5.6) nécessite une couche au format vectoriel contenant les limites des zones qui seront utilisées pour calculer la couverture de la population pour une durée de trajet donnée à partir de la grille de distribution résultant de l’analyse d’accessibilité (voir section 5.5.3).
+
+Ces zones peuvent être liées au niveau ou des rapports doivent être faits ou des prises de décision doivent avoir lieu, tels que les divisions administratives ou les districts de santé.
+
+::: callout-warning
+**La version actuelle de l'outil nécessite que l'identifiant unique de chaque zone soit stocké sous la forme d'un ENTIER dans la table attributaire de la couche des limites des zones.**
+:::

@@ -1,0 +1,27 @@
+---
+title: "3.3.2.1. Table de classification de l'occupation du sol"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-2-1-land-cover-classification-table.qmd
+    icon: translate
+---
+
+La création de la couche d'occupation du sol fusionnée (voir la section 5.5.2) nécessite une table établissant le lien entre les classes contenues dans le raster d'occupation du sol d'origine (voir la section 3.3.1.4) et leurs étiquettes correspondantes.
+
+Cette table peut être créée dans Excel, puis importée dans AccessMod (voir section 5.4.1) ou créée manuellement dans AccessMod (voir section 5.5.2). Dans les deux cas, la table est composée des deux colonnes suivantes (voir exemple ci-dessous):
+
+-   **class**: valeur entière correspondant à la classe utilisée dans la couche d'occupation du sol d'origine
+-   **label**: étiquette attachée à la classe utilisée dans la couche d'occupation du sol d'origine
+
+|       |                      |
+|-------|----------------------|
+| class | label                |
+| 1     | Built area           |
+| 2     | Low dense vegetation |
+| 3     | Dense vegetation     |
+
+Exemple de table de classification de l'occupation du sol
+
+::: callout-warning
+**Une étiquette d'occupation du sol vide générera un message d'avertissement dans la section *Validation* de la fenêtre d'analyse. L'utilisateur ne pourra pas exécuter l'analyse. L'utilisateur devra alors changer la valeur pour cette classe d'occupation du sol particulière, et ce changement peut être effectué directement dans AccessMod.**
+:::

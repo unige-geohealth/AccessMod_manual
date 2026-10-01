@@ -1,0 +1,26 @@
+---
+title: "3.3.1.4. Occupation du sol"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-4-land-cover-distribution-grid.qmd
+    icon: translate
+---
+
+AccessMod prend en compte deux rasters d'occupation du sol différents:
+
+1.  La couche d'occupation du sol originale contenant les types de d'occupation du sol de grande surface tels que forêt, zones constructibles, grands plans d'eau, champs agricoles, plaines, etc.
+2.  La couche d'occupation du sol fusionnées finale, générée à l'aide de l'outil de fusionnement de l'occupation du sol d'AccessMod (voir Section 5.5.2), incluant également les routes et les barrières aux mouvements (par exemple, les grandes rivières, les lacs,…).
+
+La couche d'occupation du sol originale contient des informations sur les types de couverture du sol (et leurs dispositions spatiales) qui caractérisent la zone d'analyse et qui pourraient influer sur le temps de parcours des patients se déplaçant dans cette zone.
+
+Cette grille doit contenir des **valeurs entières**, chaque valeur correspondant à une classe de couverture terrestre (ID de couverture terrestre). Ces identifiants de couverture terrestre sont ensuite liés à la vitesse de déplacement correspondante dans le tableau de scénario de déplacement (voir section 3.3.2.2). A partir de la version 5.6.8, si la couche d'occupation du sol importée est de type nombre à virgule, AccessMod la convertira automatiquement en valeurs entières.
+
+Pour faciliter l'intégration des routes et des barrières dans la couche finale d'occupation du sol, AccessMod propose un module (voir section 5.5.2) facilitant ce processus.
+
+La couche d'occupation du sol fusionnée est généralement construite une seule fois. D'autres scénarios de déplacement alternatifs (vitesses et/ou modes de transport différents) peuvent être facilement configurés à l'aide du fichier texte de scénario de déplacement. Ceci étant dit, il est possible de créer différentes couches d'occupation du sol fusionnées pour simuler l'impact d'une inondation ou de la construction d'une nouvelle route, par exemple.
+
+::: callout-warning
+**Les cellules *NoData* dans la couche d'occupation du sol fusionnée sont considérées comme des cellules dans lesquelles le mouvement n'est pas possible.**
+
+**Il est recommandé aux utilisateurs de classer directement les zones sur lesquelles aucun mouvement n'est prévu, ainsi que les zones situées en dehors de la zone d'étude, comme *NoData* avant d'importer la couche d'occupation du sol dans AccessMod. Cela réduira non seulement le temps de calcul, mais également le nombre de classes à gérer lors de l'application d'AccessMod. Cependant, notez que l'intégration du réseau routier au-dessus des barrières (rivières par exemple) dans la  couche d'occupation du sol fusionnée entraînera la création de ponts et reclassera donc les cellules *NoData* concernées dans la classe de routes correspondante.**
+:::

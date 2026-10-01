@@ -1,0 +1,45 @@
+---
+title: "Annexe 1 - Flux de travail automatique pour la correction de la population sur les barrières"
+other-links:
+  - text: "English version"
+    href: ../en/appendix-1-automatic-workflow-for-the-correction-of-population-on-barr.qmd
+    icon: translate
+---
+
+Cette annexe décrit les étapes suivies à l’intérieur d’AccessMod lors de l’utilisation de l’outil «Corriger la population sur les barrières» introduit avec la version 5.2 d’AccessMod. Cet outil utilise GIS GRASS pour ajuster une grille de distribution de la population (disponible par exemple dans le projet WorldPop (<http://www.worldpop.org.uk/>)) afin qu’aucune population ne tombe dans des "barrières" (telles que définies dans le jeu de données d'occupation du sol fusionnée). Les populations tombant dans les pixels de la barrière sont automatiquement réparties à l'extérieur des barrières et uniformément réparties sur tous les pixels de l'unité sous-administrative.
+
+Avant d'exécuter l'outil, il est supposé que les trois couches suivantes sont déjà chargées dans AccessMod et qu'elles ont toutes le même système de projection, la même étendue et la même résolution que le DEM:
+
+-   Grille de distribution de la population;
+-   La grille de distribution de l'occupation du sol fusionnée résultant de l'application du module d'occupation du sol fusionnée d'AccessMod (voir section 5.5.2);
+-   Limites administratives jusqu'au niveau sous-national.\
+    \
+
+Avertissement: à moins que le DEM (et par conséquent aussi la grille d'occupation du sol fusionnée) ait le même système de projection et la même résolution que la grille de distribution de la population, il est nécessaire de re-projeter et/ou de ré-échantillonner le DEM pour correspondre aux caractéristiques de la grille de population avant d'importer le premier fichier dans le projet (voir section 5.4.1).
+
+Une fois que les données ci-dessus sont disponibles, les étapes suivantes sont suivies dans GRASS (tenez compte du fait que travailler en ligne de commande dans GRASS nécessite une utilisation précise des espaces avant / après certains arguments). Certaines des commandes suivantes sont divisées en deux lignes pour des raisons de clarté, mais elles doivent être exécutées comme une ligne complète chacune:
+
+1.  Tout d'abord, une copie de travail temporaire du shapefile avec les limites administratives est créée pour éviter de remplir la table d'attributs dans le fichier d'origine avec plusieurs colonnes si l'analyse est répétée: g.copy --overwrite vector=name_of_boundaries_file,temporary_boundaries\
+    \
+2.  La commande suivante permet d'obtenir une grille de population «partielle» masquant la population sur des barrières (comme spécifié dans la grille d'occupation du sol fusionnée) ou sur des cellules situées en dehors de la zone d'intérêt (généralement représentées par «no data»), laissant toute autre cellule avec sa valeur de population d'origine (les guillemets ne sont pas facultatifs):\
+    r.mapcalc --overwrite expression="new_partial_population_file_name = if(isnull(am_merged_land_cover), null(), population_grid_name)"\
+    \
+3.  Ensuite, une nouvelle colonne vide est créée dans la table attributaire de la couche vecteur de limites temporaires avec la commande suivante:\
+    v.db.addcolumn map=temporary_boundaries columns="ratio double precision"\
+    \
+4.  Les deux étapes suivantes créent deux nouvelles colonnes dans la table attributaire de la couche vecteur temporaire de limites, en calculant dans chaque cas la «somme» des valeurs des pixels inclus dans chaque division sous-nationale respective. Le calcul est effectué dans la première commande pour la population complète (non masquée) et dans la deuxième commande pour la population partielle (barrière masquée). N'importe quel ‘préfixe de colonne’ peut être utilisé, mais il devra être mis en correspondance à l’étape suivante (5) avec le suffixe ‘\_sum’:\
+    v.rast.stats map=temporary_boundaries raster=population_grid_name column_prefix=full_pop method=sum\
+    v.rast.stats map=temporary_boundaries raster=partial_population_file_name column_prefix=part_pop method=sum\
+    \
+5.  Cette étape calcule le ratio entre la population complète (non masquée) et la population partielle (masquée), pour chaque polygone de frontière, et écrit ces ratios dans la colonne vide créée à l'étape 3:\
+    v.db.update map=temporary_boundaries layer=1 column=ratio query_column="full_pop_sum/part_pop_sum"\
+    \
+6.  Ensuite, la couche de limites sous-nationales est convertie en une grille raster en utilisant le "ratio" calculé à l’étape précédente en tant que valeur de pixel:\
+    v.to.rast --overwrite input=temporary_boundaries output=rasterized_boundaries use=attr attribute_column=ratio\
+    \
+7.  Enfin, la grille de ratios obtenue à l'étape précédente est multipliée par la grille de population partielle (masquée) pour corriger proportionnellement la population masquée en fonction des limites sous-nationales utilisées:\
+    r.mapcalc –overwrite expression="adjusted_population = partial_population_file_name \* rasterized_boundaries"
+
+En pratique, cette procédure d’ajustement calcule un rapport des différences entre les populations non masquées et masquées, récapitule les valeurs de population dans les pixels masqués (partiellement hors des frontières administratives ou recouvertes de barrières) et augmente proportionnellement les valeurs de pixels non masquées à l’intérieur des zones administratives où se trouvaient les pixels masqués. Ceci amène la population dans la grille de population masquée à la même valeur totale que la population d'origine.
+
+------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+---
+title: "3.3.1.9. Zones boundaries"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-9-limites-des-zones.qmd
+    icon: translate
+---
+
+The zonal statistics tool (see Section 5.5.6) needs a vector format layer containing the boundaries of the zones that will be used to calculate population coverage for any given travel time from the distribution grid resulting from the accessibility analysis (see Section 5.5.3).
+
+These zones can depend on the level at which reporting or decision making is to take place, such as administrative division or health district levels.
+
+::: callout-warning
+**The current version of the tool needs for the unique ID of each zone to be stored as an INTEGER in the attribute table of the zones boundaries layer.**
+:::

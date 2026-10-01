@@ -1,0 +1,21 @@
+---
+title: "5. AccessMod Tutorial"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-tutoriel-accessmod.qmd
+    icon: translate
+---
+
+
+
+## In this section
+
+- [5.1. Starting AccessMod in your browser](5-1-starting-accessmod-in-your-browser.qmd)
+- [5.2. AccessMod features](5-2-accessmod-features.qmd)
+- [5.3. Using the "Projects" module: creating and managing projects in AccessMod](5-3-using-the-projects-module-creating-and-managing-projects-in-access.qmd)
+- [5.4. Using the "Data" module: importing and managing your data in AccessMod](5-4-using-the-data-module-importing-and-managing-your-data-in-accessmo.qmd)
+- [5.5. Using the "Analysis" module](5-5-using-the-analysis-module.qmd)
+- [5.6. Using the "Interactive map" tool to preview raster layers and change facilities locations](5-6-using-the-interactive-map-tool-to-preview-raster-layers-and-change.qmd)
+- [5.7. Using the tool "Adjust population distribution"](5-7-using-the-tool-adjust-population-distribution.qmd)
+- [5.8. Using the Logs module and how to report bugs and desired functionalities](5-8-using-the-logs-module-and-how-to-report-bugs-and-desired-functiona.qmd)
+- [5.9. Using the Settings module](5-9-using-the-settings-module.qmd)

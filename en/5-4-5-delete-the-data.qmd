@@ -1,0 +1,17 @@
+---
+title: "5.4.5. Delete the data"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-4-5-supprimer-les-donnees.qmd
+    icon: translate
+---
+
+The “Delete” section can be used to permanently delete data from the project.
+
+ For that:
+
+1.  Check the specific datasets that you want to delete in the “Select” column of the Available data table.
+2.  Click the “Delete permanently” button which should have turned grey.
+3.  Click once again on “Delete” in the new window that opens to confirm the deletion.
+
+ Please note that the "Delete" action is not reversible.

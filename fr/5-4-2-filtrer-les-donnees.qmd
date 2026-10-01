@@ -1,0 +1,17 @@
+---
+title: "5.4.2. Filtrer les données"
+other-links:
+  - text: "English version"
+    href: ../en/5-4-2-filter-the-data.qmd
+    icon: translate
+---
+
+La section "Filtre" vous permet de sélectionner des jeux de données dans la table par:
+
+1.  Type de données (vecteurs, rasters, tableaux ou listes). Il suffit de cocher le bouton-radio correspondant dans la section "Filtre".
+2.  Du texte stocké dans l'un des champs inclus dans la table. Entrez simplement le texte en question dans le champ "Texte (n'importe quel champ, sensible à la casse)".
+3.  Tag(s) spécifique(s) en les entrant dans le champ "Filtre de tags".
+4.  Toute combinaison des éléments ci-dessus (type de données, texte ou tags).
+
+\
+Les résultats du filtrage apparaîtront dans le tableau "Données disponibles" situé dans le panneau du module.

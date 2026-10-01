@@ -1,0 +1,13 @@
+---
+title: "3.2.2. Pré-requis pour la virtualisation"
+other-links:
+  - text: "English version"
+    href: ../en/3-2-2-virtualization-requirement.qmd
+    icon: translate
+---
+
+Pour qu'AccessMod s'exécute, vous devez avoir autorisé la virtualisation sur votre ordinateur. Sur la plupart des ordinateurs récents, la virtualisation est disponible par défaut. Cependant, sur certains d’entre eux et sur les plus anciens, vous devrez peut-être activer cette fonction. Cela se fait généralement en modifiant le paramètre de virtualisation dans le «BIOS» de la machine. Demandez à votre responsable informatique (ou à l'animateur de l'atelier AccessMod si vous suivez un tel atelier) de vous aider à l'installer si vous ne savez pas ce qu'est le «BIOS» et/ou comment y accéder, car cela sort du cadre de ce manuel.
+
+Une marche à suivre détaillée est disponible dans le document ci-dessous.
+
+[📄 Virtualization_FR.pdf](files/4330347/virtualization-fr.pdf)

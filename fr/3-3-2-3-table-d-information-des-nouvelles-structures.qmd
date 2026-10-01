@@ -1,0 +1,37 @@
+---
+title: "3.3.2.3. Table d'information des nouvelles structures"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-2-3-new-health-facility-information-table.qmd
+    icon: translate
+---
+
+L'intégration de nouvelles structures de santé dans l'analyse de mise à l'échelle (voir section 5.5.7) nécessite une table contenant un ensemble spécifique d'informations sur les différents types de structures à prendre en compte lors de cette analyse.
+
+La table peut être créée directement dans AccessMod (voir section 5.5.7) ou dans Excel avant d'être importée dans AccessMod (voir section 5.4.1). La structure de la table doit respecter la structure suivante (voir exemple ci-dessous):
+
+1.  **min**: population minimale qui devrait être couverte par le type spécifique de structure de santé afin d'être rentable (*cost-effective*)
+2.  **max**: population maximale devant être couverte par le type spécifique de structure de santé afin d'être rentable. Cette valeur est généralement supérieure à la capacité de couverture maximale réelle de la formation sanitaire (champ *capacity* ci-dessous), tout simplement parce que ce n'est pas toute la population située dans la zone de recrutement qui cherchera des services
+3.  **label**: type de structure de santé considéré pour la tranche de population spécifiée située dans l'aire de captage (champs *min* et *max*)
+4.  **capacity**: capacité de couverture maximale de la population attachée au type de structure de santé (champs *label*)
+
+|       |         |                      |          |
+|-------|---------|----------------------|----------|
+| min   | max     | label                | capacity |
+| 0     | 1000    | Other facility       | 1000     |
+| 1001  | 2000    | Small facility       | 1428     |
+| 2001  | 4000    | Medium facility      | 2858     |
+| 4001  | 8500    | Large facility       | 5715     |
+| 8501  | 17500   | Extra large facility | 12144    |
+| 17501 | 35700   | Mega large facility  | 25000    |
+| 35701 | 9999999 | Ultra large facility | 51000    |
+
+Table de capacité, exemple de contenu
+
+Dans la table ci-dessus, la population minimale à couvrir (champ *max*) a été calculée pour chaque type de structure de santé, sachant qu'une telle structure serait toujours rentable si 70% de la capacité maximale de couverture de population était atteinte. Par exemple, une structure de santé n'est pas considérée comme rentable lorsqu'elle desserte une population de moins de 4'125 habitants.
+
+L'Annexe 2 fournit davantage d'informations sur le concept de capacité maximale de couverture de population et sur la manière dont il a été calculé pour le contexte du tutoriel présenté au chapitre 5.
+
+::: callout-warning
+**Il est important de veiller à ce que les chiffres de capacité inclus dans le tableau correspondent à la population cible (voir section 3.3.1.3). Par exemple, si la population prévalente du VIH / SIDA est ciblée, les chiffres de couverture de capacité maximale doivent se rapporter au nombre de patients séropositifs pouvant être traités par chaque type d'établissement de santé considéré, sur une année (ou une période définie de la même manière).**
+:::

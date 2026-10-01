@@ -1,0 +1,27 @@
+---
+title: "3.3.2.1. Land cover classification table"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-2-1-table-de-classification-de-l-occupation-du-sol.qmd
+    icon: translate
+---
+
+The creation of the merged land cover layer (see Section 5.5.2) requires a table making the link between the classes contained in the original land cover distribution grid (see Section 3.3.1.4) and their corresponding labels.
+
+This table can either be created in Excel and then imported into AccessMod (see Section 5.4.1) or manually created in AccessMod (see Section 5.5.2). In both cases, the table is composed of the following two columns (see example below):
+
+-   **class:** Integer value corresponding to the class used in the original land cover layer
+-   **label:** Label attached to the class used in the original land cover layer
+
+|       |                      |
+|-------|----------------------|
+| class | label                |
+| 1     | Built area           |
+| 2     | Low dense vegetation |
+| 3     | Dense vegetation     |
+
+Example of land cover classification table
+
+::: callout-warning
+**An empty land cover label will generate a warning message in the Validation section of the analysis window and the user won’t be able to run the analysis. The user will have to change the value for that particular land cover class. Such change can be performed directly in AccessMod.**
+:::

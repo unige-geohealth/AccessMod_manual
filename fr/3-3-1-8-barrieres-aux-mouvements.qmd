@@ -1,0 +1,20 @@
+---
+title: "3.3.1.8. Barrières aux mouvements"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-8-barriers-to-movement.qmd
+    icon: translate
+---
+
+L'extension spatiale des barrières au mouvement peut être intégrée à la couche d'occupation du sol fusionnée pour tenir compte des zones impossibles à franchir par un patient. Ces barrières peuvent représenter différentes composantes du paysage que la population ne peut traverser, telles que les rivières, les lacs, les zones militaires et aéroport, et les complexes industriels.
+
+Les barrières de type ligne, polygone et point peuvent être intégrées dans la couche d'occupation du sol fusionnée à l'aide du premier module «Fusionner l'occupation du sol» (voir section 5.5.2).
+
+Dans AccessMod, l’utilisateur a la possibilité d’utiliser des barrières localisées:
+
+-   En dessous du réseau routier, par exemple lorsqu'il y a un pont sur une rivière
+-   Au dessus du réseau routier, par exemple lorsque des zones sont inondées pendant la saison des pluies
+
+::: callout-warning
+**Les barrières sont converties en raster lors de la génération de l'occupation du sol fusionnée. Il est donc important de considérer l'impact que cette conversion peut avoir sur le mouvement en fonction de la résolution du DEM (voir section 3.3.1.1). Cela revêt une importance particulière dans le cas où des barrières ponctuelles (sites industriels, par exemple) sont incluses dans l’analyse.**
+:::

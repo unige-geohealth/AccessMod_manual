@@ -1,0 +1,15 @@
+---
+title: "3.3.1.5. Exclusion areas"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-5-zones-d-exclusion.qmd
+    icon: translate
+---
+
+The scaling up analysis allows users to take into account areas where a share of the target population might be living but where health facilities could/should not be located. Examples of such areas may include low lying coastal areas subject to inundation/storm surge or tsunamis, national parks, military zones, etc.
+
+The extent of the exclusion areas is stored within a vector or raster format data set. In this dataset, the polygons or cells that are part of the exclusion areas must be classified with an integer value (for example "1"), while non-excluded areas must be classified as "No Data".
+
+::: callout-warning
+**Part of the target population might be living in exclusion areas or travelling through them. This population as well as their movements will be taken into account during the analysis and therefore be attached to the catchment areas of existing facilities, but no new health facility will be found in these areas.**
+:::

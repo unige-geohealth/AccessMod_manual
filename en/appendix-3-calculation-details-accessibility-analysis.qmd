@@ -1,0 +1,17 @@
+---
+title: "Appendix 3 - Calculation details - Accessibility analysis"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-3-details-du-calcul-analyse-d-accessibilite.qmd
+    icon: translate
+---
+
+When doing an accessibility analysis in AccessMod, the following steps are done:
+
+1.  A friction surface (see figure below) is first created according to the travelling scenario and the merged land cover. This surface represents how much time is needed to cross a cell north/south-ward or east/west-ward, regardless of the direction.
+2.  The list of starting points (facilities) is created using the chosen facilities within the health facility data set.
+3.  The analysis starts using the isotropic (based on <https://grass.osgeo.org/grass72/manuals/r.cost.html>) or anisotropic (based on <https://grass.osgeo.org/grass72/manuals/r.walk.html>) algorithm, with the set of all chosen facilities as starting points and the friction surface as travel constraints. The Digital Elevation Model (DEM) is added for an anisotropic analysis and therefore take into account the influence of slope on travel speed depending on the direction of travel. Both algorithms determine the cumulative travel time of moving to each cell on the given surface from the input starting points. It produces an output raster format layer (panel *b* in Figure below) in which each cell contains the cumulative travelling time to the nearest health facility (in time, not in distance) according to the direction of travel specified by the user.
+
+![](files/4325817/picture1.png)**Example of friction map and output for the accessibility analysis**
+
+------------------------------------------------------------------------

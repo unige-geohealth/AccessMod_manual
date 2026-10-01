@@ -1,0 +1,14 @@
+---
+title: "5.2. Fonctionnalités AccessMod"
+other-links:
+  - text: "English version"
+    href: ../en/5-2-accessmod-features.qmd
+    icon: translate
+---
+
+
+
+## Contenu de cette section
+
+- [5.2.1. Fenêtre AccessMod, modules, panneaux et sections](5-2-1-fenetre-accessmod-modules-panneaux-et-sections.qmd)
+- [5.2.2. Tags et boutons de commande](5-2-2-tags-et-boutons-de-commande.qmd)

@@ -1,0 +1,15 @@
+---
+title: "3.1. License and citation"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-1-licence-et-citation.qmd
+    icon: translate
+---
+
+The license attached to AccessMod 5 (hereafter "AccessMod") is the [GNU GPL V3](https://www.gnu.org/licenses/gpl-3.0.en.html). However, there is an additional WHO “TERMS OF USE AND SOFTWARE LICENSE AGREEMENT” that you must agree to in order to use AccessMod. Please read this document carefully when downloading AccessMod. This document can also be directly downloaded from [here](https://owncloud.unepgrid.ch/index.php/s/qzkC9RA4Xh1Hxaj).
+
+The current way to cite AccessMod in your publication is to cite the original scientific article presenting the tool:
+
+Ray N & Ebener S. 2008. AccessMod 3.0: computing geographic coverage and accessibility to health care services using anisotropic movement of patients. *International Journal of Health Geographics* 7: 63
+
+A new article presenting AccessMod 5 is in preparation.

@@ -1,0 +1,13 @@
+# Quarto
+/.quarto/
+/_site/
+/_freeze/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# macOS
+.DS_Store

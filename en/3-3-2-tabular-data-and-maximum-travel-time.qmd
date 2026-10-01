@@ -1,0 +1,33 @@
+---
+title: "3.3.2. Tabular data and maximum travel time"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-2-donnees-tabulaires-et-duree-maximale-de-voyage.qmd
+    icon: translate
+---
+
+AccessMod uses different tables to input specific parameters into the different analysis.
+
+These tables can either be created in Excel (or any other spreadsheet software) and then imported into AccessMod or manually created in AccessMod. The formats supported by AccessMod during the import are as follows:
+
+**Table of supported tabular data format**
+
+|  |  |  |  |
+|----|----|----|----|
+| **Format** | **Storage mode** | **File extensions** | **Multiple files** |
+| Excel file (Office Open XML) | Table | .xslx | No |
+| Excel file (Binary File Format) | Table | .xls | No |
+| Comma-separated values | Table | .csv | No |
+| Open Document Spreadsheet | Table | .ods | No |
+
+\
+While different formats can be imported in AccessMod, the export from AccessMod will always generate an Excel file (.xlsx).
+
+The structure and content of these different tables are described in the following sections. We will then discuss the concept of maximum travel time used to define the maximum extent of the catchment areas computed by AccessMod.
+
+## In this section
+
+- [3.3.2.1. Land cover classification table](3-3-2-1-land-cover-classification-table.qmd)
+- [3.3.2.2. Traveling scenario table](3-3-2-2-traveling-scenario-table.qmd)
+- [3.3.2.3. New health facility information table](3-3-2-3-new-health-facility-information-table.qmd)
+- [3.3.2.4. Maximum travel time](3-3-2-4-maximum-travel-time.qmd)

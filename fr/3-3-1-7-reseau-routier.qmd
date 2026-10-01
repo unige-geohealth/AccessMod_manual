@@ -1,0 +1,24 @@
+---
+title: "3.3.1.7. Réseau routier"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-7-road-network.qmd
+    icon: translate
+---
+
+Le réseau routier est une couche de données clé pour une analyse d'accessibilité. Parce que la vitesse de déplacement est généralement plus élevée sur les routes, le réseau routier permettra à une aire de captage de s’étendre beaucoup plus loin d’une structure de santé et donc de «capturer» une plus grande partie de la population cible pour une durée de trajet maximale donnée.
+
+Une couche de réseau routier appropriée (format vectoriel) devrait couvrir l’ensemble du réseau de la zone d’étude. La table attributaire de cette couche doit contenir au moins deux colonnes (voir l'exemple ci-dessous):
+
+-   Classes uniques (numériques) pour chaque type de route (champ "class_n" dans l'exemple ci-dessous)
+-   Etiquette (texte) pour chaque type de route (champ "label" dans l'exemple ci-dessous)
+
+ ![](files/4330554/table-road-network-layer.png){width="300"}
+
+Exemple de table attributaire pour la couche de réseau routier
+
+Une vitesse de déplacement spécifique doit être attribuée à chaque type de route dans le tableau «Scénario de voyage» (voir section 3.3.2.2).
+
+::: callout-warning
+**AccessMod n'effectue aucune correction de vitesse liées aux contraintes topographiques sur les routes lorsque le mode de transport est «MOTORIZED» (voir section 3.3.2.2), car il suppose qu'une pente négative ou positive n'a pas d'influence significative sur la vitesse de déplacement des véhicules à moteur.**
+:::

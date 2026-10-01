@@ -1,0 +1,375 @@
+# Généré par tools/confluence2quarto.py à partir de tools/_quarto.head.yml,
+# de la hiérarchie des pages et de tools/_quarto.tail.yml.
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!tools/"
+  resources:
+    - "en/files/**"
+    - "fr/files/**"
+
+website:
+  title: "AccessMod 5"
+  site-url: "https://unige-geohealth.github.io/AccessMod_manual/"
+  repo-url: "https://github.com/unige-geohealth/AccessMod_manual"
+  repo-actions: [edit, issue]
+  page-navigation: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    left:
+      - text: "English"
+        href: en/index.qmd
+      - text: "Français"
+        href: fr/index.qmd
+    right:
+      - icon: github
+        href: "https://github.com/unige-geohealth"
+  page-footer:
+    center: "AccessMod 5 — GeoHealth group, University of Geneva"
+  sidebar:
+    - id: en
+      title: "AccessMod 5 user manual"
+      style: docked
+      collapse-level: 1
+      contents:
+        - text: "Home"
+          href: en/index.qmd
+        - text: "Acknowledgements"
+          href: en/acknowledgements.qmd
+        - text: "1. Introduction"
+          href: en/1-introduction.qmd
+        - text: "2. Tool updates compared to version 4.0"
+          href: en/2-tool-updates-compared-to-version-4-0.qmd
+        - section: "3. Using AccessMod 5"
+          href: en/3-using-accessmod-5.qmd
+          contents:
+            - text: "3.1. License and citation"
+              href: en/3-1-license-and-citation.qmd
+            - section: "3.2. System requirements"
+              href: en/3-2-system-requirements.qmd
+              contents:
+                - text: "3.2.1. Introduction"
+                  href: en/3-2-1-introduction.qmd
+                - text: "3.2.2. Virtualization Requirement"
+                  href: en/3-2-2-virtualization-requirement.qmd
+                - text: "3.2.3. Software Requirements"
+                  href: en/3-2-3-software-requirements.qmd
+                - text: "3.2.4. Hardware Requirements"
+                  href: en/3-2-4-hardware-requirements.qmd
+                - text: "3.2.5. RAM consumption and computational speed"
+                  href: en/3-2-5-ram-consumption-and-computational-speed.qmd
+            - section: "3.3. Data Requirements"
+              href: en/3-3-data-requirements.qmd
+              contents:
+                - section: "3.3.1. Geospatial data"
+                  href: en/3-3-1-geospatial-data.qmd
+                  contents:
+                    - text: "3.3.1.1. Units, projection, extent, resolution and accuracy issues"
+                      href: en/3-3-1-1-units-projection-extent-resolution-and-accuracy-issues.qmd
+                    - text: "3.3.1.2. Digital Elevation Model (DEM)"
+                      href: en/3-3-1-2-digital-elevation-model-dem.qmd
+                    - text: "3.3.1.3. Population distribution grid"
+                      href: en/3-3-1-3-population-distribution-grid.qmd
+                    - text: "3.3.1.4. Land cover distribution grid"
+                      href: en/3-3-1-4-land-cover-distribution-grid.qmd
+                    - text: "3.3.1.5. Exclusion areas"
+                      href: en/3-3-1-5-exclusion-areas.qmd
+                    - text: "3.3.1.6. Health facilities location"
+                      href: en/3-3-1-6-health-facilities-location.qmd
+                    - text: "3.3.1.7. Road network"
+                      href: en/3-3-1-7-road-network.qmd
+                    - text: "3.3.1.8. Barriers to movement"
+                      href: en/3-3-1-8-barriers-to-movement.qmd
+                    - text: "3.3.1.9. Zones boundaries"
+                      href: en/3-3-1-9-zones-boundaries.qmd
+                    - text: "3.3.1.10. Priority areas"
+                      href: en/3-3-1-10-priority-areas.qmd
+                - section: "3.3.2. Tabular data and maximum travel time"
+                  href: en/3-3-2-tabular-data-and-maximum-travel-time.qmd
+                  contents:
+                    - text: "3.3.2.1. Land cover classification table"
+                      href: en/3-3-2-1-land-cover-classification-table.qmd
+                    - text: "3.3.2.2. Traveling scenario table"
+                      href: en/3-3-2-2-traveling-scenario-table.qmd
+                    - text: "3.3.2.3. New health facility information table"
+                      href: en/3-3-2-3-new-health-facility-information-table.qmd
+                    - text: "3.3.2.4. Maximum travel time"
+                      href: en/3-3-2-4-maximum-travel-time.qmd
+        - section: "4. Installation of AccessMod 5"
+          href: en/4-installation-of-accessmod-5.qmd
+          contents:
+            - text: "4.1. Installation overview"
+              href: en/4-1-installation-overview.qmd
+            - text: "4.2. Installation process via VirtualBox"
+              href: en/4-2-installation-process-via-virtualbox.qmd
+        - section: "5. AccessMod Tutorial"
+          href: en/5-accessmod-tutorial.qmd
+          contents:
+            - text: "5.1. Starting AccessMod in your browser"
+              href: en/5-1-starting-accessmod-in-your-browser.qmd
+            - section: "5.2. AccessMod features"
+              href: en/5-2-accessmod-features.qmd
+              contents:
+                - text: "5.2.1. AccessMod window, modules, panels and sections"
+                  href: en/5-2-1-accessmod-window-modules-panels-and-sections.qmd
+                - text: "5.2.2. Tags and operating buttons"
+                  href: en/5-2-2-tags-and-operating-buttons.qmd
+            - section: "5.3. Using the \"Projects\" module: creating and managing projects in AccessMod"
+              href: en/5-3-using-the-projects-module-creating-and-managing-projects-in-access.qmd
+              contents:
+                - text: "5.3.1. Open a project"
+                  href: en/5-3-1-open-a-project.qmd
+                - text: "5.3.2. Create a new project"
+                  href: en/5-3-2-create-a-new-project.qmd
+                - text: "5.3.3. Delete a project"
+                  href: en/5-3-3-delete-a-project.qmd
+            - section: "5.4. Using the \"Data\" module: importing and managing your data in AccessMod"
+              href: en/5-4-using-the-data-module-importing-and-managing-your-data-in-accessmo.qmd
+              contents:
+                - text: "5.4.1. Import data"
+                  href: en/5-4-1-import-data.qmd
+                - text: "5.4.2. Filter the data"
+                  href: en/5-4-2-filter-the-data.qmd
+                - text: "5.4.3. Rename the data"
+                  href: en/5-4-3-rename-the-data.qmd
+                - text: "5.4.4. Archive and export the data"
+                  href: en/5-4-4-archive-and-export-the-data.qmd
+                - text: "5.4.5. Delete the data"
+                  href: en/5-4-5-delete-the-data.qmd
+            - section: "5.5. Using the \"Analysis\" module"
+              href: en/5-5-using-the-analysis-module.qmd
+              contents:
+                - text: "5.5.1. Importing the sample data for the exercises"
+                  href: en/5-5-1-importing-the-sample-data-for-the-exercises.qmd
+                - text: "5.5.2. Obtaining the merged land cover"
+                  href: en/5-5-2-obtaining-the-merged-land-cover.qmd
+                - text: "5.5.3. Analysis 1 - Accessibility"
+                  href: en/5-5-3-analysis-1-accessibility.qmd
+                - text: "5.5.4. Analysis 2 - Geographic coverage"
+                  href: en/5-5-4-analysis-2-geographic-coverage.qmd
+                - text: "5.5.5. Analysis 3 - Referral"
+                  href: en/5-5-5-analysis-3-referral.qmd
+                - text: "5.5.6. Analysis 4 - Zonal statistics"
+                  href: en/5-5-6-analysis-4-zonal-statistics.qmd
+                - text: "5.5.7. Analysis 5 - Scaling up"
+                  href: en/5-5-7-analysis-5-scaling-up.qmd
+            - text: "5.6. Using the \"Interactive map\" tool to preview raster layers and change facilities locations"
+              href: en/5-6-using-the-interactive-map-tool-to-preview-raster-layers-and-change.qmd
+            - text: "5.7. Using the tool \"Adjust population distribution\""
+              href: en/5-7-using-the-tool-adjust-population-distribution.qmd
+            - text: "5.8. Using the Logs module and how to report bugs and desired functionalities"
+              href: en/5-8-using-the-logs-module-and-how-to-report-bugs-and-desired-functiona.qmd
+            - section: "5.9. Using the Settings module"
+              href: en/5-9-using-the-settings-module.qmd
+              contents:
+                - text: "5.9.1. Enable advanced options in modules"
+                  href: en/5-9-1-enable-advanced-options-in-modules.qmd
+                - text: "5.9.2. Advanced settings and expert options"
+                  href: en/5-9-2-advanced-settings-and-expert-options.qmd
+        - text: "6. References"
+          href: en/6-references.qmd
+        - text: "Appendix 1 - Automatic workflow for the correction of population on barriers"
+          href: en/appendix-1-automatic-workflow-for-the-correction-of-population-on-barr.qmd
+        - text: "Appendix 2 - Maximum population coverage capacity of health facilities"
+          href: en/appendix-2-maximum-population-coverage-capacity-of-health-facilities.qmd
+        - text: "Appendix 3 - Calculation details - Accessibility analysis"
+          href: en/appendix-3-calculation-details-accessibility-analysis.qmd
+        - text: "Appendix 4 - Calculation details - Geographic coverage analysis"
+          href: en/appendix-4-calculation-details-geographic-coverage-analysis.qmd
+        - text: "Appendix 5 - Calculation details - Referral analysis"
+          href: en/appendix-5-calculation-details-referral-analysis.qmd
+        - text: "Appendix 6 - Calculation details - Zonal statistics"
+          href: en/appendix-6-calculation-details-zonal-statistics.qmd
+        - text: "Appendix 7 - Calculation details - Scaling up analysis"
+          href: en/appendix-7-calculation-details-scaling-up-analysis.qmd
+        - text: "Appendix 8 - Replay functionality"
+          href: en/appendix-8-replay-functionality.qmd
+        - section: "Appendix 9 - Installation and use of AccessMod via Docker desktop"
+          href: en/appendix-9-installation-and-use-of-accessmod-via-docker-desktop.qmd
+          contents:
+            - text: "9.1. Installation of Docker desktop"
+              href: en/9-1-installation-of-docker-desktop.qmd
+            - text: "9.2. AccessMod via electron launcher"
+              href: en/9-2-accessmod-via-electron-launcher.qmd
+            - text: "9.3. AccessMod via Docker compose (command line)"
+              href: en/9-3-accessmod-via-docker-compose-command-line.qmd
+    - id: fr
+      title: "AccessMod 5 manuel de l'utilisateur"
+      style: docked
+      collapse-level: 1
+      contents:
+        - text: "Accueil"
+          href: fr/index.qmd
+        - text: "Remerciements"
+          href: fr/remerciements.qmd
+        - text: "1. Introduction"
+          href: fr/1-introduction.qmd
+        - text: "2. Mise à jours par rapport à la version 4"
+          href: fr/2-mise-a-jours-par-rapport-a-la-version-4.qmd
+        - section: "3. Utilisation d'AccessMod 5"
+          href: fr/3-utilisation-d-accessmod-5.qmd
+          contents:
+            - text: "3.1. Licence et citation"
+              href: fr/3-1-licence-et-citation.qmd
+            - section: "3.2. Configuration système requise"
+              href: fr/3-2-configuration-systeme-requise.qmd
+              contents:
+                - text: "3.2.1. Introduction"
+                  href: fr/3-2-1-introduction.qmd
+                - text: "3.2.2. Pré-requis pour la virtualisation"
+                  href: fr/3-2-2-pre-requis-pour-la-virtualisation.qmd
+                - text: "3.2.3. Pré-requis logiciel"
+                  href: fr/3-2-3-pre-requis-logiciel.qmd
+                - text: "3.2.4. Pré-requis matériel"
+                  href: fr/3-2-4-pre-requis-materiel.qmd
+                - text: "3.2.5. Consommation de RAM et vitesse de calcul"
+                  href: fr/3-2-5-consommation-de-ram-et-vitesse-de-calcul.qmd
+            - section: "3.3. Pré-requis des données"
+              href: fr/3-3-pre-requis-des-donnees.qmd
+              contents:
+                - section: "3.3.1. Données géospatiales"
+                  href: fr/3-3-1-donnees-geospatiales.qmd
+                  contents:
+                    - text: "3.3.1.1. Unités, projection, étendue, résolution et problèmes de précision"
+                      href: fr/3-3-1-1-unites-projection-etendue-resolution-et-problemes-de-precision.qmd
+                    - text: "3.3.1.2. Modèle numérique d'altitude - Digital Elevation Model (DEM)"
+                      href: fr/3-3-1-2-modele-numerique-d-altitude-digital-elevation-model-dem.qmd
+                    - text: "3.3.1.3. Distribution de la population"
+                      href: fr/3-3-1-3-distribution-de-la-population.qmd
+                    - text: "3.3.1.4. Occupation du sol"
+                      href: fr/3-3-1-4-occupation-du-sol.qmd
+                    - text: "3.3.1.5. Zones d'exclusion"
+                      href: fr/3-3-1-5-zones-d-exclusion.qmd
+                    - text: "3.3.1.6. Localisation des structure de santé"
+                      href: fr/3-3-1-6-localisation-des-structure-de-sante.qmd
+                    - text: "3.3.1.7. Réseau routier"
+                      href: fr/3-3-1-7-reseau-routier.qmd
+                    - text: "3.3.1.8. Barrières aux mouvements"
+                      href: fr/3-3-1-8-barrieres-aux-mouvements.qmd
+                    - text: "3.3.1.9. Limites des zones"
+                      href: fr/3-3-1-9-limites-des-zones.qmd
+                    - text: "3.3.1.10. Zones prioritaires"
+                      href: fr/3-3-1-10-zones-prioritaires.qmd
+                - section: "3.3.2. Données tabulaires et durée maximale de voyage"
+                  href: fr/3-3-2-donnees-tabulaires-et-duree-maximale-de-voyage.qmd
+                  contents:
+                    - text: "3.3.2.1. Table de classification de l'occupation du sol"
+                      href: fr/3-3-2-1-table-de-classification-de-l-occupation-du-sol.qmd
+                    - text: "3.3.2.2. Table de scénario de voyage"
+                      href: fr/3-3-2-2-table-de-scenario-de-voyage.qmd
+                    - text: "3.3.2.3. Table d'information des nouvelles structures"
+                      href: fr/3-3-2-3-table-d-information-des-nouvelles-structures.qmd
+                    - text: "3.3.2.4. Temps de voyage maximum"
+                      href: fr/3-3-2-4-temps-de-voyage-maximum.qmd
+        - section: "4. Installation d'AccessMod 5"
+          href: fr/4-installation-d-accessmod-5.qmd
+          contents:
+            - text: "4.1. Aperçu de l'installation"
+              href: fr/4-1-apercu-de-l-installation.qmd
+            - text: "4.2. Processus d'installation via VirtualBox"
+              href: fr/4-2-processus-d-installation-via-virtualbox.qmd
+        - section: "5. Tutoriel AccessMod"
+          href: fr/5-tutoriel-accessmod.qmd
+          contents:
+            - text: "5.1. Démarrer AccessMod dans votre navigateur"
+              href: fr/5-1-demarrer-accessmod-dans-votre-navigateur.qmd
+            - section: "5.2. Fonctionnalités AccessMod"
+              href: fr/5-2-fonctionnalites-accessmod.qmd
+              contents:
+                - text: "5.2.1. Fenêtre AccessMod, modules, panneaux et sections"
+                  href: fr/5-2-1-fenetre-accessmod-modules-panneaux-et-sections.qmd
+                - text: "5.2.2. Tags et boutons de commande"
+                  href: fr/5-2-2-tags-et-boutons-de-commande.qmd
+            - section: "5.3. Utilisation du module \"Projets\": création et gestion de projets dans AccessMod"
+              href: fr/5-3-utilisation-du-module-projets-creation-et-gestion-de-projets-dans.qmd
+              contents:
+                - text: "5.3.1. Ouvrir un projet"
+                  href: fr/5-3-1-ouvrir-un-projet.qmd
+                - text: "5.3.2. Créer un nouveau projet"
+                  href: fr/5-3-2-creer-un-nouveau-projet.qmd
+                - text: "5.3.3. Supprimer un projet"
+                  href: fr/5-3-3-supprimer-un-projet.qmd
+            - section: "5.4. Utilisation du module \"Données\": importer et gérer vos données dans AccessMod"
+              href: fr/5-4-utilisation-du-module-donnees-importer-et-gerer-vos-donnees-dans-a.qmd
+              contents:
+                - text: "5.4.1. Importation des données"
+                  href: fr/5-4-1-importation-des-donnees.qmd
+                - text: "5.4.2. Filtrer les données"
+                  href: fr/5-4-2-filtrer-les-donnees.qmd
+                - text: "5.4.3. Renommer les données"
+                  href: fr/5-4-3-renommer-les-donnees.qmd
+                - text: "5.4.4. Archiver et exporter les données"
+                  href: fr/5-4-4-archiver-et-exporter-les-donnees.qmd
+                - text: "5.4.5. Supprimer les données"
+                  href: fr/5-4-5-supprimer-les-donnees.qmd
+            - section: "5.5. Utilisation du module \"Analyses\""
+              href: fr/5-5-utilisation-du-module-analyses.qmd
+              contents:
+                - text: "5.5.1. Importation des données échantillon pour les exercises"
+                  href: fr/5-5-1-importation-des-donnees-echantillon-pour-les-exercises.qmd
+                - text: "5.5.2. Obtention de l'occupation du sol fusionnée"
+                  href: fr/5-5-2-obtention-de-l-occupation-du-sol-fusionnee.qmd
+                - text: "5.5.3. Analyse 1 - Accessibilité"
+                  href: fr/5-5-3-analyse-1-accessibilite.qmd
+                - text: "5.5.4. Analyse 2 - Couverture géographique"
+                  href: fr/5-5-4-analyse-2-couverture-geographique.qmd
+                - text: "5.5.5. Analyse 3 - Référence"
+                  href: fr/5-5-5-analyse-3-reference.qmd
+                - text: "5.5.6. Analyse 4 - Statistiques zonales"
+                  href: fr/5-5-6-analyse-4-statistiques-zonales.qmd
+                - text: "5.5.7. Analyse 5 - Mise à l'échelle"
+                  href: fr/5-5-7-analyse-5-mise-a-l-echelle.qmd
+            - text: "5.6. Utilisation de l'outil \"Carte interactive\" pour visualiser les raster et changer la localisation des structures"
+              href: fr/5-6-utilisation-de-l-outil-carte-interactive-pour-visualiser-les-raste.qmd
+            - text: "5.7. Utilisation de l'outil \"Ajuster la distribution de la population\""
+              href: fr/5-7-utilisation-de-l-outil-ajuster-la-distribution-de-la-population.qmd
+            - text: "5.8. Utilisation du module de logs et comment signaler les bugs et les fonctionnalités souhaitées"
+              href: fr/5-8-utilisation-du-module-de-logs-et-comment-signaler-les-bugs-et-les.qmd
+            - section: "5.9. Utilisation du module de configuration"
+              href: fr/5-9-utilisation-du-module-de-configuration.qmd
+              contents:
+                - text: "5.9.1. Activer les options avancées dans les modules"
+                  href: fr/5-9-1-activer-les-options-avancees-dans-les-modules.qmd
+                - text: "5.9.2. Paramètres avancés et options expertes"
+                  href: fr/5-9-2-parametres-avances-et-options-expertes.qmd
+        - text: "6. Références"
+          href: fr/6-references.qmd
+        - text: "Annexe 1 - Flux de travail automatique pour la correction de la population sur les barrières"
+          href: fr/annexe-1-flux-de-travail-automatique-pour-la-correction-de-la-populati.qmd
+        - text: "Annexe 2 - Capacité de couverture maximale de la population des structures de santé"
+          href: fr/annexe-2-capacite-de-couverture-maximale-de-la-population-des-structur.qmd
+        - text: "Annexe 3 - Détails du calcul - Analyse d'accessibilité"
+          href: fr/annexe-3-details-du-calcul-analyse-d-accessibilite.qmd
+        - text: "Annexe 4 - Détails du calcul - Analyse de la couverture géographique"
+          href: fr/annexe-4-details-du-calcul-analyse-de-la-couverture-geographique.qmd
+        - text: "Annexe 5 - Détails du calcul - Analyse de référence"
+          href: fr/annexe-5-details-du-calcul-analyse-de-reference.qmd
+        - text: "Annexe 6 - Détails du calcul - Statistiques zonales"
+          href: fr/annexe-6-details-du-calcul-statistiques-zonales.qmd
+        - text: "Annexe 7 - Détails du calcul - Analyse de mise à l'échelle"
+          href: fr/annexe-7-details-du-calcul-analyse-de-mise-a-l-echelle.qmd
+        - text: "Annexe 8 - Fonctionnalité 'Replay'"
+          href: fr/annexe-8-fonctionnalite-replay.qmd
+        - section: "Annexe 9 - Installation et utilisation d'AccessMod via Docker desktop"
+          href: fr/annexe-9-installation-et-utilisation-d-accessmod-via-docker-desktop.qmd
+          contents:
+            - text: "9.1. Installation de Docker desktop"
+              href: fr/9-1-installation-de-docker-desktop.qmd
+            - text: "9.2. Installation d'AccessMod via le lanceur \"electron\""
+              href: fr/9-2-installation-d-accessmod-via-le-lanceur-electron.qmd
+            - text: "9.3. Installation d'AccessMod via Docker compose (ligne de commande)"
+              href: fr/9-3-installation-d-accessmod-via-docker-compose-ligne-de-commande.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    fig-align: center
+    link-external-newwindow: true

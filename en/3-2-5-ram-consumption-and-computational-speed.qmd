@@ -1,0 +1,13 @@
+---
+title: "3.2.5. RAM consumption and computational speed"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-2-5-consommation-de-ram-et-vitesse-de-calcul.qmd
+    icon: translate
+---
+
+AccessMod has been developed to carry out the various analyses as quickly as possible. However, if you are working with large data sets, due to for example to the high-resolution of the raster data sets and/or a high number of health facilities, analyses can take a long time. As a result, it may seem that nothing is happening while AccessMod is working on the back. Usually, in this case, if you don't see an error message on screen, this means AccessMod is still running in the background.
+
+In the event where AccessMod is frozen, takes more time than anticipated, or crashes, you can simply reload the page in your browser. You will not loose any data by doing that, but you may loose the selection of parameters that you had previously done in the interface of your analysis.
+
+If you want to run an extensive analyses, it is recommended to first ensure that a large amount of memory is available on your computer (recommendation: at least 8GB of memory). However, it is the RAM allocated to your AccessMod Virtual Machine (VM) that matters, as well as the number of CPUs allocated to it. See Section 4.2 to learn how to increase the RAM and the number of CPUs of your AccessMod VM to speed up computation speeds for large data sets.

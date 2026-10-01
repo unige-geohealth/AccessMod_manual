@@ -1,0 +1,58 @@
+---
+title: "AccessMod 5 manuel de l'utilisateur"
+other-links:
+  - text: "English version"
+    href: ../en/index.qmd
+    icon: translate
+---
+
+Bienvenue dans le manuel d’utilisation d’AccessMod 5!
+
+Si vous consultez la version imprimée / pdf de ce manuel, vous pouvez également consulter la version en ligne du manuel AccessMod 5, qui est toujours la plus à jour, en français ([https://accessmod.atlassian.net/wiki/spaces/FRAN](index.qmd)) ou en anglais ([https://accessmod.atlassian.net/wiki/spaces/EN](../en/index.qmd)).
+
+Le site principal d'AccessMod se trouve sous: <https://accessmod.org>
+
+**Auteurs principaux de ce manuel:** [Prof. Nicolas Ray](https://www.unige.ch/medecine/isg/en/research/1000ray/), [Dr. Steeve Ebener](https://www.linkedin.com/in/steeveebener/), Mr. Frederic Moser
+
+**Comment citer ce manuel:\
+**Ray, N., Ebener, S., Moser, F. 2022. AccessMod 5 - manuel de l'utilisateur, version 5.x, version en ligne. [https://accessmod.atlassian.net/wiki/spaces/EN](../en/index.qmd) 
+
+**Veuillez consulter la page GitHub d'AccessMod pour une liste complète de tous les changements et correctifs**: <https://github.com/unige-geohealth/accessmod/blob/devel/changes.md>
+
+**Contrôle des version du document**
+
+|  |  |  |  |  |
+|----|----|----|----|----|
+| **Version du manuel** | **Date de la ** **version** | **Editeur(s)** | **Version AccessMod** | Changements |
+| 5.8 | 26.12.2022 | N. Ray, C. Ochoa | 5.8 | AccessMod s'exécute désormais sous Docker, soit via 1) la machine virtuelle (comme avant), 2) une application de lancement dédiée, 3) directement via Docker installé sur la machine de l'utilisateur. Possibilité de revenir aux versions précédentes. Possibilité d'utiliser le "Knight's move" pour l'analyse cost distance. Possibilité de générer un raster de "cost allocation" lors de l'analyses d'accessibilité. Les statistiques zonales peuvent être effectuées pour plusieurs temps de trajet à la fois. Analyses plus rapides et meilleure réactivité. Une version en ligne de commande d'accessMod (mode "Replay") est disponible. Mises à jour de la plupart des librairies, nombreuses autres améliorations et corrections de bugs. |
+| 5.6.25 | 28.11.2019 | N. Ray | 5.6.25 | Option de calculs plus rapides pour les grands pays avec haut résolution; Importation et exportation des projets (paramètres et données); analyse de la couverture géographique est maintenant possible sans considération d'une capacité maximale; ajustement automatique des totaux de population dans le module "correction de la population"; précision accrue dans les résultats tabulaires du module "Référence".   |
+| 5.6.11.2 | 1.9.2019 | N. Ray | 5.6.11.2 | Nouvelle classe raster "temps de voyage importé" pour importer des raster temps de voyage produits par d'autres projets; Conversion en format entier des raster "occupation du sol" importés; visibilité accrue de la disponibilité d'une nouvelle version. |
+| 5.6.4 | 10.6.2019 | N. Ray | 5.6.4 | [Mise à jour des nouveaux liens vers le manuel en ligne. Mise à jour de la description des "Eléments de la pile" sous 5.5.2 pour refléter un changement de comportement. Mise à jour de 5.5.6 pour la description du temps de voyage max.]{.c-blue} |
+| 5.6.0 | 1.5.2019 | N. Ray, Y. Guigoz | 5.6.0 | 1ère version française du manuel. Mise à jour de diverses parties du manuel pour la nouvelle version majeure 5.6. |
+| 5.3.2.1 | 8.4.2019 | N. Ray | 5.3.2 | Mise à jour de diverses parties du manuel avec les améliorations suggérées, répertoriées dans l'issue [#155](https://github.com/fxi/AccessMod_shiny/issues/155) sur Github |
+| 5.3.2 | 11.3.2019 | N. Ray | 5.3.2 | Mise à jour de diverses parties du manuel, ainsi que de toutes les captures d'écran afin de refléter les nouvelles fonctionnalités. |
+| 5.2.1 | 29.9.2018 | N. Ray, S. Ebener | 5.2.1 | Mise à jour de plusieurs parties du manuel pour refléter les nouvelles fonctionnalités de la version 5.2.1 et améliorer certaines parties du texte |
+| 5.1.12 | 11.05.2018 | N. Ray | 5.1.12 | Version éditée avec description du nouvel outil de sélection / filtrage des structures. Ajout des détails sur la mise à jour AccessMod dans la section 5.1. Nouveau schéma de numérotation pour le document (il correspond maintenant à la version d'AccessMod sur laquelle il est basé) |
+| 1.1.0 | 01.07.2017 | N. Ray, S. Ebener | 5.0.7 | Version modifiée après prise en compte des commentaires/modifications de: Michelle Schmitz, Karin Stenberg, Andrew Curtis |
+| 1.0.0 | 24.06.2017 | N. Ray, S. Ebener, F. Moser | 5.0.7 | Document complet initial |
+
+------------------------------------------------------------------------
+
+## Contenu de cette section
+
+- [Remerciements](remerciements.qmd)
+- [1. Introduction](1-introduction.qmd)
+- [2. Mise à jours par rapport à la version 4](2-mise-a-jours-par-rapport-a-la-version-4.qmd)
+- [3. Utilisation d'AccessMod 5](3-utilisation-d-accessmod-5.qmd)
+- [4. Installation d'AccessMod 5](4-installation-d-accessmod-5.qmd)
+- [5. Tutoriel AccessMod](5-tutoriel-accessmod.qmd)
+- [6. Références](6-references.qmd)
+- [Annexe 1 - Flux de travail automatique pour la correction de la population sur les barrières](annexe-1-flux-de-travail-automatique-pour-la-correction-de-la-populati.qmd)
+- [Annexe 2 - Capacité de couverture maximale de la population des structures de santé](annexe-2-capacite-de-couverture-maximale-de-la-population-des-structur.qmd)
+- [Annexe 3 - Détails du calcul - Analyse d'accessibilité](annexe-3-details-du-calcul-analyse-d-accessibilite.qmd)
+- [Annexe 4 - Détails du calcul - Analyse de la couverture géographique](annexe-4-details-du-calcul-analyse-de-la-couverture-geographique.qmd)
+- [Annexe 5 - Détails du calcul - Analyse de référence](annexe-5-details-du-calcul-analyse-de-reference.qmd)
+- [Annexe 6 - Détails du calcul - Statistiques zonales](annexe-6-details-du-calcul-statistiques-zonales.qmd)
+- [Annexe 7 - Détails du calcul - Analyse de mise à l'échelle](annexe-7-details-du-calcul-analyse-de-mise-a-l-echelle.qmd)
+- [Annexe 8 - Fonctionnalité 'Replay'](annexe-8-fonctionnalite-replay.qmd)
+- [Annexe 9 - Installation et utilisation d'AccessMod via Docker desktop](annexe-9-installation-et-utilisation-d-accessmod-via-docker-desktop.qmd)

@@ -1,0 +1,25 @@
+---
+title: "Annexe 6 - Détails du calcul - Statistiques zonales"
+other-links:
+  - text: "English version"
+    href: ../en/appendix-6-calculation-details-zonal-statistics.qmd
+    icon: translate
+---
+
+Les calculs sous-jacents à l'outil de statistiques zonales dans AccessMod sont relativement simples comparés aux autres modules. En effet, ce module utilise simplement le raster de répartition du temps de trajet obtenue à l'aide de l'outil d'analyse de l'accessibilité de la boîte à outils AccessMod pour déterminer la population couverte pour une durée de trajet donnée et la comparer à la population totale afin de fournir les résultats selon les zones signalées dans la couche de frontières de format de vecteur (voir la section 3.3.1.9). Veuillez noter que le temps de trajet *t* utilisé pour les statistiques zonales doit être inférieur au trajet maximal T utilisé lors de l'analyse d'accessibilité.
+
+C'est le processus utilisé pour obtenir les pourcentages finaux de la population couverte, par zone, pour une durée de trajet donnée:
+
+1.  Trois couches sont sélectionnées par l'utilisateur:
+    1.  la couche de distribution de la population au format raster,
+    2.  la couche de répartition des temps de parcours au format raster obtenue précédemment par une analyse d'accessibilité pour un temps de parcours maximal *T*,
+    3.  la couche de limites de zone au format vecteur.
+2.  Le temps de trajet maximal i (en minutes) auquel l'utilisateur souhaite afficher les résultats est défini.
+3.  Une sélection spatiale est effectuée afin de sélectionner toutes les cellules de la distribution de temps de parcours dont la valeur est inférieure ou égale à *t*.
+4.  Les cellules sélectionnées à l'étape 3 sont converties en un masque au format raster appliqué à la couche de distribution de la population afin d'obtenir une couche raster temporaire contenant la population située dans le temps de parcours donné *t*. Pendant ce temps, les cellules en dehors de la population masquée se voient attribuer une population de zéro.
+5.  Après avoir été convertie en un raster présentant la même résolution que la couche de population et y avoir été alignée, la couche de limites de zones est utilisée pour calculer, pour chaque zone:\
+    1.  La population située à l'intérieur du temps de parcours *t*, extraite de la grille temporaire créée à l'étape 4. Il s'agit des valeurs placées dans la colonne "PopTravelTime" de la table de modules.
+    2.  La population totale se trouvant dans la couche de distribution de population d'origine. Ce sont les valeurs placées dans la colonne "PopTotal" de la table de module.
+6.  Le pourcentage de la population couverte pour chaque zone est ensuite calculé à l'aide de la formule suivante: (PopTravelTime / PopTotal) \* 100. Le résultat de ce calcul est indiqué dans la colonne "PopCovered Percent" de la table de modules.
+
+------------------------------------------------------------------------

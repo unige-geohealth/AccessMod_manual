@@ -1,0 +1,16 @@
+---
+title: "5.4.2. Filter the data"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-4-2-filtrer-les-donnees.qmd
+    icon: translate
+---
+
+The “Filter” section you to select data sets within the table by:
+
+1.  Type of data (vectors, rasters, or tables or lists). Just check the corresponding radio button in the "Filter" section.
+2.  A piece of text stored in any of the fields included in the table. Just enter the text in question in the "Text (any field, case sensitive)" field.
+3.  Specific tag(s) by entering them in the "Tags filter" field.
+4.  Any combination of the above (i.e., data type, text, or tags).
+
+ The results of the filtering will appear in the "Available data" table located in the module panel.

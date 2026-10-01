@@ -1,0 +1,11 @@
+---
+title: "5.3.3. Supprimer un projet"
+other-links:
+  - text: "English version"
+    href: ../en/5-3-3-delete-a-project.qmd
+    icon: translate
+---
+
+Pour supprimer un projet, sélectionnez simplement le nom du projet dans le menu déroulant de la section «Supprimer» et cliquez sur le bouton «Supprimer». Notez que cela supprime toutes les données importées dans le projet (c'est-à-dire les données téléchargées qui résident dans la machine virtuelle) et tous les jeux de données créés dans ce projet. L'action de suppression n'est pas réversible.
+
+Les jeux de données d'origine stockés sur votre ordinateur, et donc en dehors de la machine virtuelle, ne seront pas affectés. Les jeux de données que vous avez exportés à partir d’AccessMod (c’est-à-dire à partir de la machine virtuelle) et enregistrés sur votre disque dur ne seront également pas affectés.

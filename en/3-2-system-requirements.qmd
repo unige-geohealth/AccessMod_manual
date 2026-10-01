@@ -1,0 +1,17 @@
+---
+title: "3.2. System requirements"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-2-configuration-systeme-requise.qmd
+    icon: translate
+---
+
+
+
+## In this section
+
+- [3.2.1. Introduction](3-2-1-introduction.qmd)
+- [3.2.2. Virtualization Requirement](3-2-2-virtualization-requirement.qmd)
+- [3.2.3. Software Requirements](3-2-3-software-requirements.qmd)
+- [3.2.4. Hardware Requirements](3-2-4-hardware-requirements.qmd)
+- [3.2.5. RAM consumption and computational speed](3-2-5-ram-consumption-and-computational-speed.qmd)

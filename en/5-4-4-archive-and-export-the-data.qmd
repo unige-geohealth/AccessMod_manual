@@ -1,0 +1,25 @@
+---
+title: "5.4.4. Archive and export the data"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-4-4-archiver-et-exporter-les-donnees.qmd
+    icon: translate
+---
+
+The “Archive” section is used to zip data before the export.
+
+ To do this:
+
+1.  Check the data you want to zip in the “Select” column of the "Available data" table
+2.  Click the “Create archive” button which should have turned grey
+
+ AccessMod will then zip the file(s) that have been selected and have the zip file ready for export from the VM. The structure of the file name that is being created is as follows and corresponds to the date and time when the file was created by AccessMod):
+
+ *am5_year_month_day_hour_min_sec.zip*
+
+ Please note that:
+
+-   Each data item that has been selected in the available data table will be stored in a separated folder in the resulting zip file.
+-   The time that is captured in the zip file name should correspond to the time as per your computer settings.
+
+[To start the export, select the zip file you want to export from the drop-down menu and click the “Export archive” button. Note that the latest created archive appears at the top of the menu and is selected by default. Depending on the configuration of your browser, you might be asked to specify the location for saving the archive, or it will automatically download in your default download location.]{.c-blue}

@@ -1,0 +1,31 @@
+---
+title: "Annexe 5 - Détails du calcul - Analyse de référence"
+other-links:
+  - text: "English version"
+    href: ../en/appendix-5-calculation-details-referral-analysis.qmd
+    icon: translate
+---
+
+L'analyse de référence dans AccessMod permet de calculer les temps de parcours et/ou les distances le long des trajets de moindre coût entre deux groupes de centres de santé. L’algorithme sous-jacent à l’analyse de référence est relativement simple, car il consiste à calculer les temps de trajet et les distances entre chaque paire de structures de santé par une double boucle: l’une passant par toutes les structures du premier ensemble de structures de santé, l’autre passant par toutes les structures du deuxième ensemble de structures de santé.
+
+Les étapes sont les suivantes:
+
+1.  Un premier ensemble de structures de santé est choisi par l'utilisateur (l'ensemble "De").
+2.  Un deuxième ensemble de structures de santé est choisi par l’utilisateur (l'ensemble "A"). Cet ensemble peut provenir de la même couche que l'ensemble "De", ou d'une autre couche.
+3.  La première structure de santé de l'ensemble "De" est sélectionné.
+4.  Une analyse d'accessibilité est lancée depuis la structure de santé "De" vers toutes les structures de santé appartenant à l'ensemble «A», en fonction du scénario de déplacement indiqué par l'utilisateur. Le temps de trajet et la distance (le long du trajet de moindre coût) sont calculés entre la structure de santé "De" et toutes les structures "A", et leurs valeurs sont enregistrées dans les tables de résultats.
+5.  Le prochain établissement de santé du groupe "De" est sélectionné.
+6.  Les points (4) et (5) sont répétés jusqu'à ce que toutes les structures de santé du groupe "De" aient été itérées.
+
+À la fin du calcul, l'outil génère la table de scénario traitée, la couche de distribution spatiale de vitesse et de frottement, ainsi que trois tables de sortie, à savoir:
+
+-   [referral nearest by dist class]{.underline}: une table indiquant laquelle des structures "A" sélectionnées est la plus proche en distance de chacune des installations "De" sélectionnées
+-   [referral nearest by time class:]{.underline} une table indiquant laquelle des structures "A" sélectionnées est la plus proche en durée de chacune des installations "De" sélectionnées
+-   [referral class:]{.underline} une table contenant tous les résultats par paires, c.-à-d. les distances et les temps de parcours pour chaque paire "De" - "A"
+
+**Calcul parallélisé de l'analyse de référence\
+**
+
+À partir de la version 5.3.2 de AccessMod, l’analyse de référence s’exécute en mode parallélisé, ce qui réduit le temps de calcul global. Ce "module de référence multiCPUs" parallèle exploite désormais le nombre de cœurs (CPU) disponibles dans la machine virtuelle AccessMod et envoie des calculs indépendants à chacun d'eux. Chaque calcul est une itération sur une structure "De" et tous les résultats sont fusionnés à la fin pour générer les fichiers Excel résultants. Ce processus est transparent pour l'utilisateur.
+
+------------------------------------------------------------------------

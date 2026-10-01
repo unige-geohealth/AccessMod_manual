@@ -1,0 +1,85 @@
+---
+title: "Annexe 2 - Capacité de couverture maximale de la population des structures de santé"
+other-links:
+  - text: "English version"
+    href: ../en/appendix-2-maximum-population-coverage-capacity-of-health-facilities.qmd
+    icon: translate
+---
+
+Le module d’analyse de la couverture géographique d’AccessMod permet d’intégrer la distribution spatiale des services de santé (offre) et de la population (demande) dans une même analyse, afin d’évaluer si les structures physiquement accessibles dans un temps donné ont également assez de capacité pour couvrir une telle demande.
+
+Dans cette analyse, la capacité maximale de couverture de la population de chaque structure de santé est considérée comme le nombre maximal de personnes que le service peut couvrir sur une période donnée en fonction de la capacité d'accueil exprimée en nombre de patients.
+
+Cette annexe décrit un moyen possible de calculer une capacité de couverture de population maximale générique (non spécifique à une intervention) pour deux types de structures.
+
+**[1. Concepts]{.underline}**
+
+La capacité maximale de couverture de la population d'une structure de santé correspond à la population qu'une structure de santé spécifique peut desservir pour une ou plusieurs interventions, sur une période donnée (généralement une année).
+
+Ce concept est extrait de la notion d'utilisation de la capacité, qui correspond au degré d'utilisation des structures de santé par les patients, par rapport au nombre total de patients qu'une structure de santé pourrait potentiellement desservir. Ce paramètre est le produit de deux fonctions:
+
+1.  La fréquence à laquelle les patients utilisent le service de la structure de santé,
+2.  Le nombre de patients qu'un établissement de santé peut desservir.
+
+ Les considérations et les calculs impliqués dans chaque fonction sont décrits séparément ci-dessous.
+
+ ***1.1 Fréquence d'utilisation***
+
+Sur le plan économique, cela pourrait être qualifié de demande que les gens ont en services de santé. La demande est une fonction complexe impliquant de nombreuses variables, notamment l'accessibilité physique (la préoccupation d'AccessMod), le prix financier des services de santé, la qualité des services fournis, l'éducation de la personne, etc. 
+
+Pour calculer la demande en services de santé par les patients, nous utilisons le nombre moyen de visites par personne et par an. Le nombre moyen de visites ambulatoires par personne et par an et le nombre moyen d'admissions en hospitalisation sont indiqués pour un grand nombre de pays dans les Indicateurs du développement globaux (Banque mondiale, 2001). Cependant, les moyennes nationales reflètent l’ensemble de la population d’un pays; c'est-à-dire que la moyenne incluait également les personnes qui n'ont actuellement pas un bon accès physique aux structures de santé. Ainsi, une représentation plus précise de l'utilisation des centres de santé sera tirée des régions du pays qui ont actuellement accès aux établissements de santé. Dans la mesure du possible, les données susmentionnées devraient également correspondre aux domaines non couverts en termes de revenus, d'éducation, etc.
+
+Pour les hôpitaux, il est important de distinguer les hospitalisations par type d'hôpital. Par exemple, les établissements de niveau supérieur (hôpitaux d'enseignement ou hôpitaux centraux, par exemple) peuvent ne recevoir que des cas particuliers ou complexes et avoir des taux d'admission pour les patients hospitalisés par habitant inférieurs à ceux d'un hôpital de district. Les taux d'admission doivent être multipliés par la durée moyenne du séjour afin de déterminer la demande annuelle de lits.
+
+ ***1.2 Nombre de patients servis dans une structure de santé***
+
+ Nous recommandons d'utiliser les formules développées dans Doherty et al. (1996) pour déterminer le nombre de patients servis dans une structure de santé.
+
+Pour résumer la discussion dans cet article, le nombre de patients qu’un centre de santé peut voir par an à sa capacité habituelle est égal au nombre d’agents de santé multiplié par le nombre de patients vus par agent de santé par jour multiplié par le nombre de jours ouvrables dans une année.
+
+Cependant, dans les zones touchées par des maladies saisonnières, telles que le paludisme, le taux d'utilisation maximal des centres de santé à un moment donné de l'année peut être beaucoup plus élevé que l'utilisation moyenne tout au long de l'année. Dans ce cas, les taux d'utilisation de pointe doivent être pris en compte plutôt que les taux d'utilisation moyens.
+
+Pour déterminer le nombre de patients desservis par un hôpital, le nombre de lits d'hôpitaux est plus approprié que la charge de travail par agent de santé. Pour déterminer la capacité d'un hôpital, le nombre de lits peut être multiplié par le taux d'occupation moyen. Ce chiffre doit ensuite être multiplié par le nombre de jours de travail par an pour estimer le nombre total de jours-lit disponibles dans une année.
+
+***1.3 Capacité de couverture maximale de la population***
+
+Si le nombre de patients servis dans une structure de santé est suffisant, on peut résumer la population totale qu’il peut desservir:
+
+Population totale desservie = (nombre d'agents de santé \* nombre de patients vus un jour moyen \* nombre de jours travaillés par an) / (nombre moyen de consultations externes par habitant et par an)
+
+Dans le cas d'un hôpital, ce paramètre peut être résumé comme suit:
+
+Population totale desservie = (nombre de lits \* taux d'occupation \* nombre de jours de travail par an) / (nombre moyen d'admissions pour patients hospitalisés par habitant par an \* durée moyenne du séjour).
+
+ **[2. Exemple de calcul de la capacité de couverture maximale de la population pour l'ensemble de données d'échantillon du Malawi]{.underline}**
+
+***2.1 Pour les centres de santé***
+
+Nous faisons l'hypothèse qu'il y a un médecin et une infirmière dans un centre de santé opérationnel en milieu rural. Nous supposons qu'ensemble, ces deux travailleurs pouvaient voir 75 patients par jour et travaillaient 236 jours par an. La moyenne nationale actuelle des visites ambulatoires par habitant et par an est estimée à 2. Nous avons porté ce nombre à 3 pour tenir compte de l'augmentation de l'accès physique. Ainsi, la formule est la suivante:
+
+(75 patients vus par jour \* 236 jours ouvrables par an) / (3 visites par habitant et par an) = **5,893.**
+
+Cela représente la population totale moyenne pouvant être desservie par un centre de santé.
+
+***2.2 Pour les hôpitaux***
+
+**2.2.1 Hôpitaux de niveau primaire (district)**
+
+Nous avons supposé une moyenne de 109,5 lits dans un hôpital de district, avec un taux d'occupation de 80%. Bien que les taux d'admission pour patients hospitalisés ne soient pas disponibles pour le Malawi, nous avons calculé une estimation de 0,11 total des admissions en hospitalisation par habitant et par an (tous types d'hôpitaux confondus) en provenance d'autres pays d'Afrique subsaharienne, dont 61% dans des hôpitaux de niveau primaire. Pour calculer le nombre total de patients servis:
+
+(109,5 lits \* 80% d'occupation \* 365 jours par an) / (0,11 admissions par habitant et par an \* 61% des admissions dans les hôpitaux primaires \* 6,06 durée moyenne du séjour \[jours\]) = **78,632.**
+
+Cela représente la population moyenne desservie par un hôpital primaire.
+
+**2.2.2 **Hôpitaux de niveau secondaire****
+
+Nous avons supposé une moyenne de 331 lits, une durée moyenne de séjour de 6,26 jours et 27,8% du total des hospitalisations dans les hôpitaux de niveau secondaire, soit une population moyenne de ****505,539**** personnes****.****
+
+**2.2.3 ****Hôpitaux de niveau tertiaire******
+
+Nous avons supposé une moyenne de 986.5 lits, une durée moyenne de séjour de 8.2 jours et 11% du nombre total de patients hospitalisés dans des hôpitaux de niveau secondaire, ce qui donne une population moyenne de****** **2,875,233**.\
+******
+
+Notez que ces calculs supposent qu'un système de référence efficace est en place.
+
+------------------------------------------------------------------------

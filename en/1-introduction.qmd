@@ -1,0 +1,27 @@
+---
+title: "1. Introduction"
+other-links:
+  - text: "Version française"
+    href: ../fr/1-introduction.qmd
+    icon: translate
+---
+
+Sustainable Development Goal 3 (SDG 3) aims to ensure healthy lives and promote well-being for all at all ages. This implies a well-functioning health system providing promotive, preventive and curative care. The establishment of a physical infrastructure through which quality health care services can be provided is a basic requirement when moving towards Universal Health Coverage (UHC). Ensuring that health services are available, accessible and respond to the needs of individuals and communities has a direct impact on health outcomes.
+
+AccessMod is a toolbox that has been developed to assist countries to examine the geographic aspects of their health system. It specifically addresses the first three layers of a well-known framework developed by Tanahashi (1978) to evaluate health service coverage (the specific three layers being: the target population, availability coverage and accessibility coverage). By assessing how physically accessible the current health system is, AccessMod allows identifying gaps and weaknesses with respect to reaching target populations. Moreover, AccessMod allows for the testing of different options aiming at extending (scaling up) the existing health care delivery network to expand population coverage, thereby directly supporting the planning processes and informing the implementation of policies supporting UHC and SDG 3.
+
+More specifically, AccessMod uses the integrating power of geography as well as the visual and analytical capacities of Geographic Information Systems (GIS) to:
+
+1.  Assess how physically accessible existing health services are to the target population - Physical accessibility analysis
+2.  Estimate the share of the target population that would have physical access to existing facilities but could not receive care due to shortages of human or equipment capacity - Geographic coverage analysis
+3.  Measure travel time and distances between health facilities to estimate for example the time required for referral to a higher level facility or to deliver supplies from a supply store to a facility - Referral analysis
+4.  Identify physical accessibility coverage (i.e., percentage of the population having physical access to health services within a given time)  at the sub-national level and this for different travel time specified by the user - Zonal statistics
+5.  Design and simulate different scenarios aiming at scaling up the existing service delivery network in order to increase population coverage - Scaling up analysis
+
+At the core of AccessMod is an algorithm based on least-cost paths and accumulative cost surface that allows delineation of catchments. Refer to Ray and Ebener (2008) for details.
+
+This document contains the necessary information for installing and using AccessMod version 5.x. Additionally, chapter 5 of this document is a full tutorial to learn how to use version 5 based on the sample data set for Malawi.
+
+The preparation of input data and the manipulation of AccessMod results (such as vector and raster data sets) require for the user to already be familiar with at least one GIS software (e.g. QGIS, ArcGIS, GRASS) that needs to be installed on his/her machine in order to be able to complete the tutorial and to benefit from all AccessMod functionalities.
+
+------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+---
+title: "3.2. Configuration système requise"
+other-links:
+  - text: "English version"
+    href: ../en/3-2-system-requirements.qmd
+    icon: translate
+---
+
+
+
+## Contenu de cette section
+
+- [3.2.1. Introduction](3-2-1-introduction.qmd)
+- [3.2.2. Pré-requis pour la virtualisation](3-2-2-pre-requis-pour-la-virtualisation.qmd)
+- [3.2.3. Pré-requis logiciel](3-2-3-pre-requis-logiciel.qmd)
+- [3.2.4. Pré-requis matériel](3-2-4-pre-requis-materiel.qmd)
+- [3.2.5. Consommation de RAM et vitesse de calcul](3-2-5-consommation-de-ram-et-vitesse-de-calcul.qmd)

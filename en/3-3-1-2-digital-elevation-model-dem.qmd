@@ -1,0 +1,21 @@
+---
+title: "3.3.1.2. Digital Elevation Model (DEM)"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-2-modele-numerique-d-altitude-digital-elevation-model-dem.qmd
+    icon: translate
+---
+
+The Digital Elevation Model (DEM) holds elevation values in a raster format dataset. The topography of the terrain is important to consider because it may influence (positively or negatively) the speed of travel over a given land cover depending on the travel scenario. This is especially true when patients are walking or using a bike to reach a health facility.
+
+In AccessMod 5, the DEM is also used as the reference grid for each individual analysis and is therefore the layer that needs to be provided when creating a new project (see Section 5.3.2). The extent, projection and resolution of all the other layers to be imported in the project will be based on the DEM. It is therefore important to pay particular attention to this layer.
+
+The DEM is not used when conducting isotropic analysis (i.e. no influence of slopes on speed of travel), but the DEM is mandatory in order to do an anisotropic analysis (i.e. when slopes affect the assumed speed of travel).
+
+::: callout-warning
+**Altitude values in the DEM must be in meters! It is only with map units in meters that the conversions between speeds of travel stored in the traveling scenario table (see section 3.3.2.2) and therefore the calculation of distances effectively travelled are correctly done.**
+
+**"No Data" cells in the DEM grid are considered as cells in which movement is not possible. It is therefore recommended to check that cells classified as such are indeed restricted and that there should be no movement occurring through these. If needed, these cells will have to be manually corrected before using the DEM. Please note that movement by boat over the sea, lakes or rivers, will require for the areas in question to have an altitude in the DEM (e.g. 0 meters for the sea level).**
+
+**The DEM grid should also be checked for potential artifacts (e.g. artificial hills) that would influence movements.**
+:::

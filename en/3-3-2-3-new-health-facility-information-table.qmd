@@ -1,0 +1,37 @@
+---
+title: "3.3.2.3. New health facility information table"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-2-3-table-d-information-des-nouvelles-structures.qmd
+    icon: translate
+---
+
+Placing new health facilities as part of the Scaling up analysis (see Section 5.5.7) requires a table that contains a specific set of information about the different types of health facilities that should be considered during this analysis.
+
+The table can either be directly created in AccessMod (see Section 5.5.7) or in Excel before being imported in AccessMod (see Section 5.4.1). The structure of the table must adhere to the following structure (see example below):
+
+1.  **min:** minimum population that should be covered by the specific type of health facility in order to be cost-effective
+2.  **max:**  maximum population that should be covered by the specific type of health facility in order to be cost-effective. This value is generally bigger than the real maximum coverage capacity of the health facility (*capacity* field below) and this simply because not all the population located in the catchment area will seek services
+3.  **label:** type of health facility considered for the specified range of population located in the catchment area (*min* and *max* fields)
+4.  **capacity**: Maximum population coverage capacity attached to the health facility type (*label* field)
+
+|       |         |                      |          |
+|-------|---------|----------------------|----------|
+| min   | max     | label                | capacity |
+| 0     | 1000    | Other facility       | 1000     |
+| 1001  | 2000    | Small facility       | 1428     |
+| 2001  | 4000    | Medium facility      | 2858     |
+| 4001  | 8500    | Large facility       | 5715     |
+| 8501  | 17500   | Extra large facility | 12144    |
+| 17501 | 35700   | Mega large facility  | 25000    |
+| 35701 | 9999999 | Ultra large facility | 51000    |
+
+Capacity table, example of content
+
+In the above table, the minimum population that needs to be covered (*max* field) has been calculated for each type of health facility considering that such a facility would still be cost effective if 70 % of the maximum population coverage capacity was reached. For example, a health center is not considered as cost effective when serving a population smaller than 4'125 inhabitants.
+
+Appendix 2 provides more information about the concept of maximum population coverage capacity and how this has been calculated for the context of the tutorial reported in Chapter 5.
+
+::: callout-warning
+**It important to make sure that the capacity figures included in the table are consistent with the target population (see Section 3.3.1.3). For example, if the HIV/AIDS prevalent population is targeted then the maximum capacity coverage figures should refer to the number of HIV/AIDS positive patients that can be served by each considered health facility type, over a year (or similarly defined time period).**
+:::

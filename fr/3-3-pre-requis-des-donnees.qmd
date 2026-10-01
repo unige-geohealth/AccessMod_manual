@@ -1,0 +1,92 @@
+---
+title: "3.3. Pré-requis des données"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-data-requirements.qmd
+    icon: translate
+---
+
+Les outils et analyses inclus dans AccessMod requièrent deux principaux types de données pour s'exécuter:
+
+1.  Données géospatiales
+2.  Données tabulaires et paramètres associés
+
+\
+Les paragraphes suivants répertorient ces jeux de données avant de les décrire plus en détail dans les sections suivantes. Ceux qui sont obligatoires pour exécuter chaque outil ou analyse AccessMod sont indiqués en **gras** ci-dessous. Il est toutefois recommandé d’inclure également les autres jeux de données dans la mesure du possible, afin de générer des résultats plus réalistes.
+
+[Données pour l'outil de fusionnement de l'occupation du sol:]{.underline}
+
+Les données suivantes sont nécessaires pour créer la couche d'occupation du sol fusionnée à l'aide de cet outil:
+
+-   **Grille de répartition de l'occupation du sol**: données au format raster contenant la répartition de l'occupation du sol, sans routes ni barrières.
+-   **Table de légende de l'occupation du sol**: Table contenant l'étiquette pour chaque classe d'occupation du sol.
+-   Réseau routier: données au format vectoriel ligne contenant le réseau routier et utilisées uniquement si les routes doivent être intégrées dans le réseau de distribution de l'occupation du sol fusionnée.
+-   Barrières aux mouvements: données au format vectoriel polygone, ligne ou point qui sont utilisées uniquement si des barrières aux mouvements tels que des plans d'eau ou des rivières doivent être intégrés dans le raster de l'occupation du sol fusionnée.
+
+Le raster de l'occupation du sol fusionnée résultant de l'application de cet outil est nécessaire pour effectuer les différentes analyses dans AccessMod.
+
+[Données pour l'outil de correction de la population:]{.underline}
+
+Les données suivantes sont nécessaires pour ajuster le raster de la population afin d'éviter qu'une partie de cette population ne soit placée sur des barrières:
+
+-   **Distribution de la population**: couche au format raster contenant la distribution spatiale de la population cible à ajuster.
+-   **Occupation du sol fusionnée**: couche au format raster contenant le résultat de l'application de l'outil de fusionnement de l'occupation du sol.
+-   **Zones**: Couche au format vectoriel polygone contenant les limites des zones (administratives) utilisées pour assurer la cohérence des chiffres de population lors de l'ajustement.
+
+\
+[Données permettant d'effectuer l'analyse d'accessibilité:]{.underline}
+
+Les données suivantes sont nécessaires en plus de la grille de l'occupation du sol fusionnée générée avec le premier outil pour effectuer l'analyse d'accessibilité:
+
+-   **Emplacements des structures de santé**: couche au format vectoriel point contenant l'emplacement des structures de santé considérées dans l'analyse.
+-   Modèle numérique de terrain (DEM): couche au format raster contenant la distribution spatiale des altitudes utilisées si des mouvements anisotropes (c'est-à-dire la direction du déplacement influence la vitesse) sont pris en compte dans l'analyse.
+-   **Scénario de voyage**: table contenant une vitesse de déplacement et un mode de transport (à pied, à moteur ou à vélo) pour chaque classe du raster d'occupation du sol fusionnée.
+
+\
+[Données permettant d'effectuer l'analyse de la couverture géographique:]{.underline}
+
+Les données suivantes sont nécessaires en plus de la grille de l'occupation du sol fusionnée générée avec le premier outil pour effectuer une analyse de la couverture géographique:
+
+-   **Emplacements des structures de santé**: couche au format vectoriel contenant l'emplacement de chaque structure de santé (point) considérée dans l'analyse avec l'indication de la capacité de couverture maximale de la population pour chacune d'elle dans la table attributaire.
+-   **Distribution de la population**: couche au format raster contenant la distribution spatiale de la population cible.
+-   **Scénario de voyage**: table contenant une vitesse de déplacement et un mode de transport (à pied, à moteur ou à vélo) pour chaque classe du raster d'occupation du sol fusionnée.
+-   Modèle numérique de terrain (DEM): couche au format raster contenant la distribution spatiale des altitudes utilisées si des mouvements anisotropes (c'est-à-dire la direction du déplacement influence la vitesse) sont pris en compte dans l'analyse.
+
+\
+[Données permettant d'effectuer l'analyse de référence:]{.underline}
+
+Les données suivantes sont nécessaires en plus de la grille de distribution de couverture du sol fusionnée générée avec le premier outil pour effectuer l'analyse de référence:
+
+-   **Emplacements des structures de santé**: couche au format vectoriel contenant l'emplacement de chaque structure de santé (point) pour les deux groupes utilisés dans le processus de référence (DE et A).
+-   **Scénario de voyage**: table contenant une vitesse de déplacement et un mode de transport (à pied, à moteur ou à vélo) pour chaque classe du raster d'occupation du sol fusionnée.
+-   Modèle numérique de terrain (DEM): couche au format raster contenant la distribution spatiale des altitudes utilisées si des mouvements anisotropes (c'est-à-dire la direction du déplacement influence la vitesse) sont pris en compte dans l'analyse.
+
+[Données pour effectuer les statistiques zonales:]{.underline}
+
+Les données suivantes sont nécessaires pour utiliser l'outil de statistiques par zones:
+
+-   **Distribution de la population**: couche au format raster contenant la distribution spatiale de la population cible.
+-   **Couche de distribution des temps de voyage** résultant de l'analyse d'accessibilité (données au format raster).
+-   **Limites des zones**: Couche au format vectoriel contenant les limites des zones considérées pour obtenir les statistiques (divisions administratives, districts sanitaires, ...).
+
+\
+[Données permettant d'effectuer l'analyse de mise à l'échelle:]{.underline}
+
+Les données suivantes sont nécessaires en plus de la grille de distribution de couverture du sol fusionnée générée avec le premier outil pour effectuer l'analyse de reproduction à plus grande échelle:
+
+-   **Distribution de la population**: couche au format raster contenant la distribution spatiale de la population cible initiale dans la zone d'étude.
+-   **Distribution de la population résiduelle**: couche au format raster représente la distribution spatiale de la population non couverte (résiduelle) après l'analyse de la couverture géographique.
+-   **Scénario de voyage**: table contenant une vitesse de déplacement et un mode de transport (à pied, à moteur ou à vélo) pour chaque classe du raster d'occupation du sol fusionnée.
+-   **Capacité des nouvelles structures de santé:** Table contenant les informations nécessaires pour localiser une nouvelle structure de santé pendant l'analyse.
+-   Emplacements des structures de santé: couche au format vectoriel contenant l'emplacement des structures de santé (point) existantes si celles-ci doivent être prises en compte dans l'analyse.
+-   Modèle numérique de terrain (DEM): couche au format raster contenant la distribution spatiale des altitudes utilisées si des mouvements anisotropes (c'est-à-dire la direction du déplacement influence la vitesse) sont pris en compte dans l'analyse.
+-   Zones d'exclusion: données au format vectoriel ou raster contenant l'extension des zones sur lesquelles les nouvelles structures ne peuvent pas être localisées.
+-   Distribution des zones prioritaires: données au format raster contenant la distribution spatiale des zones à prendre en compte en priorité lors de l'analyse de la mise à l'échelle.
+
+\
+Veuillez noter que les zones d'exclusion et de priorité peuvent également être définies dans AccessMod en fonction d'autres données au format vectoriel. Les couches vectorielles utilisées dans ce cas devront être importées dans AccessMod avant d'effectuer l'analyse.
+
+## Contenu de cette section
+
+- [3.3.1. Données géospatiales](3-3-1-donnees-geospatiales.qmd)
+- [3.3.2. Données tabulaires et durée maximale de voyage](3-3-2-donnees-tabulaires-et-duree-maximale-de-voyage.qmd)

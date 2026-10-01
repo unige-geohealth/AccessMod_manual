@@ -1,0 +1,30 @@
+---
+title: "2. Mise à jours par rapport à la version 4"
+other-links:
+  - text: "English version"
+    href: ../en/2-tool-updates-compared-to-version-4-0.qmd
+    icon: translate
+---
+
+Par rapport à la version 4, AccessMod 5.x:
+
+1.  Est compilée comme une application open source autonome pouvant non seulement fonctionner sur différentes plates-formes (Windows, Linux, Mac) via l’utilisation d’une machine virtuelle (VirtualBox), mais aussi consommer des données géospatiales créées par différents logiciels SIG (ArcGIS, QGIS, GRASS,...);
+2.  Inclut non seulement les outils et analyses présents dans la version 4.0, mais également des outils supplémentaires permettant d’effectuer davantage d’analyses et de simplifier le travail de l’utilisateur. Les outils et analyses inclus dans la version 5.x sont les suivant:
+    1.  [Analyses]{.underline}:
+        1.  [Analyse d’accessibilité]{.underline}: calcul de la distribution spatiale du temps de trajet en direction ou en provenance du ou des établissements de santé les plus proches pris en compte dans l’analyse, et ce, pour une durée de trajet maximale spécifiée;
+        2.  [Analyse de la couverture géographique]{.underline}: prise en compte de la disponibilité des services (capacité de l'établissement de santé à soigner les patients), en plus des contraintes d'accessibilité physique, pour définir l'étendue de la zone de captage associée à chaque structure de santé;
+        3.  [Analyse de la référence]{.underline}: calcule des temps de trajet et / ou des distances le long des trajets de moindre coût entre deux groupes de structures de santé
+    2.  [Statistiques zonales:]{.underline} Obtenir la couverture d'accessibilité de la population au niveau des zones administratives définies dans le projet 
+    3.  [Analyse de la mise à l'échelle:]{.underline} Tester différents scénarios visant à développer un réseau de prestations de service existantes ou à en établir un nouveau
+    4.  [Outils:]{.underline}
+        1.  [Carte interactive]{.underline}: permet d'afficher et d'interroger les couches au format raster incluses dans le projet, ainsi que de corriger l'emplacement des structures qui tombent sur des barrières;
+        2.  [Fusionnement de l'occupation du sol]{.underline}: crée la couche d'occupation du sol au format raster utilisée dans AccessMod en fusionnant le réseau routier, le réseau hydrographique (rivières, lacs, etc) et les couches d'occupation du sol en arrière-plan;
+        3.  [Correction de la population sur les barrières]{.underline}: permet d'ajuster la couche de population cible afin d'éviter que cette population soit placée sur des barrières.
+3.  Utilise une méthode considérablement améliorée pour la création de la couche d'occupation du sol fusionnée, y compris la possibilité de nettoyer automatiquement les artefacts créés lorsqu'une route se trouve trop près d'une barrière (par exemple une rivière);
+4.  Contient un module entièrement re-développé pour le module de l'analyse de mise à l'échelle, avec une approche multi-critères permettant de créer des modèles réalistes basés sur des règles;
+5.  Améliore substantiellement la vitesse de calcul des analyses de la référence en utilisant une approche de calcul distribué utilisant pleinement le nombre de processeurs disponibles sur la machine de l'utilisateur;
+6.  Fournit aux utilisateurs:
+    1.  Plus de flexibilité en termes de saisie de données et de paramètres d'analyse;
+    2.  Amélioration générale des performances et de la vitesse pour les différentes analyses.
+
+------------------------------------------------------------------------

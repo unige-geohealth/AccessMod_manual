@@ -1,0 +1,15 @@
+---
+title: "5.3.1. Open a project"
+other-links:
+  - text: "Version française"
+    href: ../fr/5-3-1-ouvrir-un-projet.qmd
+    icon: translate
+---
+
+To open an existing project, simply select its name in the drop-down menu of the “*Open”* section. This will load all data associated to the project (input data and output results).
+
+ AccessMod comes with a demo project (called “DEMO“) containing data from an area in Malawi. This project can be used to quickly test the functionalities of AccessMod.
+
+ However, the present tutorial uses the same Malawi data sets in a separate project in order to teach users to learn how to use the different modules, panels and sections, before performing their own analyses afterwards.
+
+ The Malawi datasets to be used are stored in the "sample" folder that you have downloaded from the download page on the AccessMod web site. Please ensure that you have located this folder and ensured that it is saved in an appropriate location on your hard drive.

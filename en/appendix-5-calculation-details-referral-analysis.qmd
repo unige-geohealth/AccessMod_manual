@@ -1,0 +1,30 @@
+---
+title: "Appendix 5 - Calculation details - Referral analysis"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-5-details-du-calcul-analyse-de-reference.qmd
+    icon: translate
+---
+
+The referral analysis in AccessMod allows one to compute the travelling times and/or the distances along the least-cost paths between two groups of health centers. The algorithm underlying the referral analysis is relatively straightforward, as it involves computing travelling times and distances between each pair of health facilities through a double loop: one running through all the facilities of the first set of health facilities, the other one running through all the facilities of the second set of health facilities.
+
+ The steps are as follows:
+
+1.  A first set of health facilities is chosen by the user (the "From" set).
+2.  A second set of health facilities is chosen by the user (the "To" set). This set can come from the same layer than the "From" set, or from another layer.
+3.  The first health facility of the "From" set is selected.
+4.  An accessibility analysis is launched from the selected "From" health facility to all facilities belonging to the "To" set, based on the travelling scenario indicated by the user. The travelling time and the distance (along the least-cost path) is computed between the "From" health facility and all "To" facilities, and their values are recorded in the output tables.
+5.  The next health facility of the "From" set is selected.
+6.  Points (4) and (5) are repeated until all health facilities of the "From" set have been iterated.
+
+ At the end of the computation, the tool generates the processed scenario table, the speed and friction spatial distribution layer, as well as three output tables that are:
+
+-   [referral nearest by dist class:]{.underline} A table indicating which one of the selected "To" facilities is the closest by distance from each of the selected "From" facilities
+-   [referral nearest by time class:]{.underline} A table indicating which one of the selected "To" facilities is the closest by travel time from each of the selected "From" facilities
+-   [referral class:]{.underline} A table containing all pair-wise results, i.e. the distances and travelling times for each “From” - "To" pair
+
+**Parallel computation of the referral analysis**
+
+Starting with version 5.3.2 of AccessMod, the referral analysis runs in parallel mode, which decreases the overall computation time. This parallel "multiCPUs referral module" now exploits the number of available cores (CPUs) in the AccessMod virtual machine, and sends independent jobs to each of them. Each job is an iteration on one "departure" facility, and all results are merged at the end to output the resulting Excel files. This process is transparent to the user.
+
+------------------------------------------------------------------------

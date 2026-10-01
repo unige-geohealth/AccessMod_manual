@@ -1,0 +1,20 @@
+---
+title: "3.3.1.8. Barriers to movement"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-8-barrieres-aux-mouvements.qmd
+    icon: translate
+---
+
+Spatial extension of barriers to movement can be incorporated into the merged land cover layer to account for areas that cannot be crossed by a patient. These barriers may represent various components of the landscape the population cannot travel through, such as rivers, lakes, military and airport zones and industrial complexes.
+
+Line, polygon and point type barriers can be integrated into the merged land cover grid using the first module “Merge land cover” (see section 5.5.2). 
+
+In AccessMod, the user is actually provided with the possibility to have barriers located:
+
+-   Below the road network such as when there is a bridge over a river for example
+-   On top of the road network for example when areas are flooded during the rainy season
+
+::: callout-warning
+**Barriers are converted into grid cells when generating the merged land cover. It is therefore important to remember the impact that this conversion can have on movement depending on the resolution of the DEM (see Section 3.3.1.1). This is of particular importance in case point-type barriers (e.g. industrial sites) are being included in the analysis.**
+:::

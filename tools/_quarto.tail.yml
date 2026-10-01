@@ -1,0 +1,9 @@
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    fig-align: center
+    link-external-newwindow: true

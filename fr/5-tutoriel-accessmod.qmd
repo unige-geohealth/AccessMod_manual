@@ -1,0 +1,21 @@
+---
+title: "5. Tutoriel AccessMod"
+other-links:
+  - text: "English version"
+    href: ../en/5-accessmod-tutorial.qmd
+    icon: translate
+---
+
+
+
+## Contenu de cette section
+
+- [5.1. Démarrer AccessMod dans votre navigateur](5-1-demarrer-accessmod-dans-votre-navigateur.qmd)
+- [5.2. Fonctionnalités AccessMod](5-2-fonctionnalites-accessmod.qmd)
+- [5.3. Utilisation du module "Projets": création et gestion de projets dans AccessMod](5-3-utilisation-du-module-projets-creation-et-gestion-de-projets-dans.qmd)
+- [5.4. Utilisation du module "Données": importer et gérer vos données dans AccessMod](5-4-utilisation-du-module-donnees-importer-et-gerer-vos-donnees-dans-a.qmd)
+- [5.5. Utilisation du module "Analyses"](5-5-utilisation-du-module-analyses.qmd)
+- [5.6. Utilisation de l'outil "Carte interactive" pour visualiser les raster et changer la localisation des structures](5-6-utilisation-de-l-outil-carte-interactive-pour-visualiser-les-raste.qmd)
+- [5.7. Utilisation de l'outil "Ajuster la distribution de la population"](5-7-utilisation-de-l-outil-ajuster-la-distribution-de-la-population.qmd)
+- [5.8. Utilisation du module de logs et comment signaler les bugs et les fonctionnalités souhaitées](5-8-utilisation-du-module-de-logs-et-comment-signaler-les-bugs-et-les.qmd)
+- [5.9. Utilisation du module de configuration](5-9-utilisation-du-module-de-configuration.qmd)

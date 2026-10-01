@@ -1,0 +1,12 @@
+/* Couleurs de texte héritées de Confluence */
+.c-red    { color: #bf2600; }
+.c-blue   { color: #0747a6; }
+.c-orange { color: #ff8b00; }
+.c-yellow { color: #b38600; }
+.c-green  { color: #006644; }
+.c-purple { color: #403294; }
+.c-teal   { color: #008da6; }
+.c-gray   { color: #6b778c; }
+
+/* Captures d'écran : jamais plus larges que la colonne */
+main img { max-width: 100%; height: auto; }

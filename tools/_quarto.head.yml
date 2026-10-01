@@ -1,0 +1,32 @@
+# Généré par tools/confluence2quarto.py à partir de tools/_quarto.head.yml,
+# de la hiérarchie des pages et de tools/_quarto.tail.yml.
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!tools/"
+  resources:
+    - "en/files/**"
+    - "fr/files/**"
+
+website:
+  title: "AccessMod 5"
+  site-url: "https://unige-geohealth.github.io/AccessMod_manual/"
+  repo-url: "https://github.com/unige-geohealth/AccessMod_manual"
+  repo-actions: [edit, issue]
+  page-navigation: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    left:
+      - text: "English"
+        href: en/index.qmd
+      - text: "Français"
+        href: fr/index.qmd
+    right:
+      - icon: github
+        href: "https://github.com/unige-geohealth"
+  page-footer:
+    center: "AccessMod 5 — GeoHealth group, University of Geneva"

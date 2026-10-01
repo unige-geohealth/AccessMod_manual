@@ -1,0 +1,21 @@
+---
+title: "5.5. Utilisation du module \"Analyses\""
+other-links:
+  - text: "English version"
+    href: ../en/5-5-using-the-analysis-module.qmd
+    icon: translate
+---
+
+Le module "Analyses" d'AccessMod donne accès à cinq analyses différentes qui permettent aux utilisateurs de sélectionner les données d'entrée et d'effectuer différentes analyses. Bien qu'il ne soit pas nécessaire d'utiliser ces analyses dans un ordre particulier, certains des résultats générés sont nécessaires pour effectuer d'autres analyses.
+
+Les sections suivantes vous permettent de vous familiariser avec chacune de ces analyses sous la forme d'un tutoriel utilisant l'ensemble de données de démonstration du Malawi. Le lecteur tirera profit de l’application séquentielle des instructions données dans les sous-chapitres suivants pour apprendre comment l’utilisation de chaque outil repose sur l’utilisation des autres.
+
+## Contenu de cette section
+
+- [5.5.1. Importation des données échantillon pour les exercises](5-5-1-importation-des-donnees-echantillon-pour-les-exercises.qmd)
+- [5.5.2. Obtention de l'occupation du sol fusionnée](5-5-2-obtention-de-l-occupation-du-sol-fusionnee.qmd)
+- [5.5.3. Analyse 1 - Accessibilité](5-5-3-analyse-1-accessibilite.qmd)
+- [5.5.4. Analyse 2 - Couverture géographique](5-5-4-analyse-2-couverture-geographique.qmd)
+- [5.5.5. Analyse 3 - Référence](5-5-5-analyse-3-reference.qmd)
+- [5.5.6. Analyse 4 - Statistiques zonales](5-5-6-analyse-4-statistiques-zonales.qmd)
+- [5.5.7. Analyse 5 - Mise à l'échelle](5-5-7-analyse-5-mise-a-l-echelle.qmd)

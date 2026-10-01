@@ -1,0 +1,19 @@
+---
+title: "Appendix 9 - Installation and use of AccessMod via Docker desktop"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-9-installation-et-utilisation-d-accessmod-via-docker-desktop.qmd
+    icon: translate
+---
+
+## [9.1. Installation of Docker desktop](https://doc-accessmod.unepgrid.ch/display/EN/9.1.+Installation+of+Docker+desktop) {#appendix9-installationanduseofaccessmodviadockerdesktop-9-1-installationofdockerdesktop}
+
+## [9.2. AccessMod via electron launcher](https://doc-accessmod.unepgrid.ch/display/EN/9.2.+AccessMod+via+electron+launcher) {#appendix9-installationanduseofaccessmodviadockerdesktop-9-2-accessmodviaelectronlauncher}
+
+## [9.3. AccessMod via Docker compose (command line)](https://doc-accessmod.unepgrid.ch/pages/viewpage.action?pageId=71697089) {#appendix9-installationanduseofaccessmodviadockerdesktop-9-3-accessmodviadockercompose-commandline}
+
+## In this section
+
+- [9.1. Installation of Docker desktop](9-1-installation-of-docker-desktop.qmd)
+- [9.2. AccessMod via electron launcher](9-2-accessmod-via-electron-launcher.qmd)
+- [9.3. AccessMod via Docker compose (command line)](9-3-accessmod-via-docker-compose-command-line.qmd)

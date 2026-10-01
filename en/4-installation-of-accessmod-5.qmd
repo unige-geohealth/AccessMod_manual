@@ -1,0 +1,14 @@
+---
+title: "4. Installation of AccessMod 5"
+other-links:
+  - text: "Version française"
+    href: ../fr/4-installation-d-accessmod-5.qmd
+    icon: translate
+---
+
+
+
+## In this section
+
+- [4.1. Installation overview](4-1-installation-overview.qmd)
+- [4.2. Installation process via VirtualBox](4-2-installation-process-via-virtualbox.qmd)

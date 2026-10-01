@@ -1,0 +1,21 @@
+---
+title: "3.3.1.3. Population distribution grid"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-3-distribution-de-la-population.qmd
+    icon: translate
+---
+
+AccessMod requires a raster format layer that contains the distribution of the target population for the study area in order to perform the geographic coverage and scaling up analysis as well as use the zonal statistics tool. Population figures in this grid can be stored either as integer or floating-points numbers.
+
+The best results will be obtained by using a grid in which small populated places, such as villages, are represented as single cells while the population living in large populated places, such as towns, is distributed over the full geographic extent of these large populated places. One example of such an approach is presented in Black *et al.* (2004).
+
+Please note that most of the time, these population distribution datasets are usually not available. In this case, one may use data sets based on census data such as those shared through projects like WorldPop ([<http://www.worldpop.org.uk/>]{.underline}) or the Gridded Population of the World (GPW, [<http://sedac.ciesin.columbia.edu/data/collection/gpw-v3>]{.underline}).
+
+::: callout-warning
+**In AccessMod, "No data" areas (e.g. water bodies) should be considered as unpopulated. Therefore, population distribution grid needs to be consistent with the "No data" areas reported in the merged land cover distribution grid (see next section 3.3.1.4).**
+
+**If population remains in “No Data” cells, a warning message will appear in AccessMod. The user can either decide to launch the analysis anyway (thereby missing some population that will virtually “escape” the analysis) or to use the tool “Correct for population on barriers” (see section 5.7).**
+
+**The geographic coverage analysis generates a raster showing those population cells that are located on top of barriers. This allows users to more easily pinpoint these cells and correct them in their GIS software if necessary. **
+:::

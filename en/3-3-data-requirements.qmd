@@ -1,0 +1,86 @@
+---
+title: "3.3. Data Requirements"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-pre-requis-des-donnees.qmd
+    icon: translate
+---
+
+The tools and analysis included in AccessMod require two main types of data in order to run:
+
+1.  Geospatial data
+2.  Tabular data and associated parameters
+
+The following paragraphs list these data sets before describing them in more detail in the following sections. Those mandatory to run each AccessMod tool or analysis are indicated in **bold** below. It is however recommended to include the other data sets as well whenever possible and this in order to generate more realistic results.
+
+[Data for the merge land cover tool]{.underline}:
+
+The following data is needed to create the merged land cover layer using this tool:
+
+-   **Land cover distribution grid:** Raster format data containing the distribution of land cover without roads and barriers.
+-   **Land cover legend table**: Table containing the label for each land cover class.
+-   Road network: Line vector format data containing the road network and used only if roads are to be integrated in the merged land cover distribution grid.
+-   Barriers to movement: Polygon, line and/or point vector format data used only if barriers to movements such as water bodies or rivers are to be integrated in the merged land cover distribution grid.
+
+The merged land cover distribution grid resulting from the application of this tool is required to perform the different analysis in AccessMod.
+
+[Data for the Population adjustment tool]{.underline}:
+
+The following data is needed to adjust the population distribution grid to avoid for part of this population to be placed on barriers:
+
+-   **Population distribution**: Raster format layer containing the spatial distribution of the target population that needs to be adjusted.
+-   **Merged landcover:** Raster format layer containing the result of the application of the merged landcover tool.
+-   **Zones:** Vector format layer containing the boundaries of the zones used to ensure the consistency of the population figures during the adjustment.
+
+[Data for performing the accessibility analysis:]{.underline}
+
+The following data is needed in addition to the merged land cover distribution grid generated with the first tool to perform the accessibility analysis:
+
+-   **Health facility locations:** Vector format layer containing the location of the health facilities (points) considered in the analysis.
+-   Digital Elevation Model (DEM): Raster format layer containing the spatial distribution of altitudes used if anisotropic movements (i.e. movement of unequal physical properties depending on the direction of travel) are considered in the analysis.
+-   **Travel scenario:** Table containing a traveling speed and a mode of transport (walking, motorized or bicycling) for each class in the merged land cover distribution grid.
+
+[Data for performing the geographic coverage analysis:]{.underline}
+
+The following data is needed in addition to the merged land cover distribution grid generated with the first tool to perform geographic coverage analysis:
+
+-   **Health facility locations:** Vector format layer containing the location of each health facility (point) considered in the analysis with the indication of the **maximum population coverage capacity for each of them in the** **attribute table**
+-   **Population distribution**: Raster format layer containing the spatial distribution of the target population.
+-   **Travel scenario:** Table containing a traveling speed and a mode of transport (walking, motorized or bicycling) for each class in the merged land cover distribution grid.
+-   Digital Elevation Model (DEM): Raster format data containing the spatial distribution of altitudes used if anisotropic movements are considered in the analysis.
+
+[Data for performing the referral analysis:]{.underline} 
+
+The following data is needed in addition to the merged land cover distribution grid generated with the first tool to perform the referral analysis:
+
+-   **Health facility locations:** Vector format layer containing the location of health facilities for both groups used in the referral process (FROM and TO).
+-   **Travel scenario:** Table containing a traveling speed and a mode of transport (walking, motorized or bicycling) for each class in the merged land cover distribution grid.
+-   Digital Elevation Model (DEM): Raster format layer containing the spatial distribution of altitudes used if anisotropic movements are considered in the analysis.
+
+[Data for performing the zonal statistics:]{.underline}
+
+The following data is needed to use the zonal statistics tool:
+
+-   **Population distribution:** Raster format data layer containing the spatial distribution of the target population.
+-   **Travel time distribution** layer resulting from the accessibility analysis (raster format data).
+-   **Boundaries of the zones:** Vector format layer containing the boundaries of the zones considered for obtaining the statistics (administrative divisions, health districts,...).
+
+[Data for performing the scaling up analysis:]{.underline}
+
+The following data is needed in addition to the merged land cover distribution grid generated with the first tool to perform the scaling up analysis:
+
+-   **Population distribution**: Raster format layer containing the spatial distribution of the original total target population over the study area.
+-   **Residual population distribution:** Raster format layer the spatial distribution of the population not covered after conducting the geographic coverage analysis.
+-   **Travel scenario:** Table containing a traveling speed and a mode of transport (walking, motorized or bicycling) for each class in the merged land cover distribution grid.
+-   **New health facility capacity:**  Table containing the necessary information for locating a new health facility during the analysis.
+-   Health facility locations: Vector format layer containing the location of the existing health facilities if they are to be considered in the analysis.
+-   Digital Elevation Model (DEM) Raster format layer containing the spatial distribution of altitudes used if anisotropic movements are considered in the analysis).
+-   Exclusion areas: Vector or raster format data containing the extension of the areas over which new facilities cannot be located.
+-   Priority area distribution: Raster format data containing the spatial distribution of areas to be considered in priority during the scaling up analysis.
+
+Please note that exclusion and priority areas can also be defined in AccessMod based on other vector format data. The vector format layers used in this case will have to be imported in AccessMod prior to conducting the analysis.
+
+## In this section
+
+- [3.3.1. Geospatial data](3-3-1-geospatial-data.qmd)
+- [3.3.2. Tabular data and maximum travel time](3-3-2-tabular-data-and-maximum-travel-time.qmd)

@@ -1,0 +1,15 @@
+---
+title: "3. Using AccessMod 5"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-utilisation-d-accessmod-5.qmd
+    icon: translate
+---
+
+
+
+## In this section
+
+- [3.1. License and citation](3-1-license-and-citation.qmd)
+- [3.2. System requirements](3-2-system-requirements.qmd)
+- [3.3. Data Requirements](3-3-data-requirements.qmd)

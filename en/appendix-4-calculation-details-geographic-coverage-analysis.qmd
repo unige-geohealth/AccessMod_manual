@@ -1,0 +1,37 @@
+---
+title: "Appendix 4 - Calculation details - Geographic coverage analysis"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-4-details-du-calcul-analyse-de-la-couverture-geographique.qmd
+    icon: translate
+---
+
+The following process is used by AccessMod when performing the geographic coverage analysis once all the input data and settings have been specified (see section 5.5.4):
+
+ 1. The list of user-defined health facilities (HFs) is sorted according to the processing order chosen by the user, namely:
+
+       i. Based on a field in the health facility layer. In this case, the HFs are sorted according to the values reported in the selected field.
+
+       ii. Based on the population located in the catchment area computed for the specified travel time. In this case, an accessibility analysis is launched for each HF, using the maximum travelling time set by the user. The population in each of the individual catchment areas is extracted, and the HFs are then sorted according to the extracted values.
+
+       iii. Based on the population within a circular buffer around the facility, specified by the radius provided by the user. In this case, a circular buffer is created around each HF using the user-defined radius. The population in each of the individual circle is extracted and the HFs are then sorted according to the extracted values.
+
+2\. A duplicate of the original raster format population distribution is created and will be used as the layer to contain the spatial distribution of the residual population
+
+3\. The algorithm then performs the following steps on each health facility (HF) in the list, following the sorting order defined in step 1:
+
+a\. An accessibility analysis is performed (using the *r.walk* algorithm from GRASS) using the travelling scenario and maximum travelling time set by the user. This results in a catchment area and a cumulative travel time distribution grid over that same catchment area.
+
+b\. The cumulative travel time distribution grid is used to perform a zonal statistics analysis over the residual population raster data set for each cumulative minute of travel time (1, 2, 3,...), starting from the HF and extending outwards. This step results in the creation of a frequency table containing the cumulative sum of population from the HF to the considered travel minute (minimum to maximum cumulative sum of the population).
+
+c\. The frequency table and the following rules are then used to determine the process being applied for the rest of the analysis:
+
+                              i.  If the maximum coverage capacity attached to the HF is lower than the minimum cumulative sum of population (i.e., population within 1 min of travel time - first zone):, the process evenly removes the maximum coverage capacity of the HF from the residual population located within the 1 min travel time catchment area. The boundary of the catchment area is a convex hull around this first zone. There is no residual capacity in this case.
+
+                             ii. If the maximum coverage capacity of the HF is greater than the maximum cumulative sum of population (population within the maximum travel time set by the user - last zone): the process subtracts the maximum cumulative sum of population from the maximum coverage capacity, and uses this value to calculate the residual coverage capacity for the HF. The catchment boundary is a convex hull around this last zone and the residual population is set to zero for all the cells in that catchment area. There [is]{.underline} residual capacity, in this case.
+
+                            iii. If the maximum coverage capacity of the HF exactly matches one of the cumulative population sums (i.e., population for a given travel time) the process set the residual population to zero for all the cells until that particular travel time in the catchment area. The catchment boundary is a convex hull around this zone. There is no residual capacity in this case.
+
+                           iv. If the maximum coverage capacity attached to the HF is between the minimum and maximum cumulative sum of population in the catchment, but does not exactly match the cumulative population for a given minute of travel time, the process identifies the travel time for which the cumulative population is just above the maximum coverage capacity of the HF (last zone considered in this case). The residual population is set to zero for all the cells until that particular travel time, minus 1 min. In the last zone, the process evenly removes the remaining capacity from the residual population cells. The catchment boundary, in this case, is the convex hull polygon around this last zone. There is no residual capacity in this case.
+
+------------------------------------------------------------------------

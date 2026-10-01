@@ -1,0 +1,25 @@
+---
+title: "Appendix 6 - Calculation details - Zonal statistics"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-6-details-du-calcul-statistiques-zonales.qmd
+    icon: translate
+---
+
+The calculations underlying the zonal statistics tool in AccessMod are relatively simple compared to the other modules. Indeed, this module simply uses the travel time distribution grid obtained through the use of the accessibility analysis tool from the AccessMod toolbox to determine the covered population for a given travel time *t* and compared it with the total population in order to provide the results according to the zones reported in the vector format zones boundaries layer (See section 3.3.1.9). Please note that the travel time *t* used for the zonal statistics has to be smaller than the maximum travel *T* used during the accessibility analysis.
+
+ This is the process used to get the final percentages of covered population, by zone, for a given travel time: 
+
+1.  Three layers are selected by the user:
+    1.  the raster format population distribution layer,
+    2.  the raster format travel time distribution layer obtained previously through an accessibility analysis for a maximum travel time *T*,
+    3.  the vector format zone boundaries layer.
+2.  The maximum travel time *t* (in minutes) at which the user wants to display the results is defined.
+3.  A spatial selection is performed in order to select all the cells from the travel time distribution whose value is smaller or equal to *t*.
+4.  The cells selected under Step 3 are converted into a raster format mask that is applied to the population distribution layer to obtain a temporary raster layer that contains the population located within the given travel time *t*. Meanwhile, cells outside of the masked population are assigned zero population.
+5.  After having been converted into a raster presenting the same resolution than the population layer and snapped to it, the zones boundaries layer is used to compute, for each zone:
+    1.  The population located within the travel time *t*, extracted from the temporary grid created under Step 4. These are the values placed in "PopTravelTime" column of the module table.
+    2.  The total population found in the original population distribution layer. These are the values placed in the "PopTotal" column of the module table.
+6.  The percentage of the covered population for each zone is then computed using the following formula: (PopTravelTime / PopTotal)\*100. The result of this computation is reported as the "PopCovered Percent" column of the module table.
+
+------------------------------------------------------------------------

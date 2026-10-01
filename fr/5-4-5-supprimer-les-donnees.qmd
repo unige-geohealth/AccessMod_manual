@@ -1,0 +1,17 @@
+---
+title: "5.4.5. Supprimer les données"
+other-links:
+  - text: "English version"
+    href: ../en/5-4-5-delete-the-data.qmd
+    icon: translate
+---
+
+La section "Supprimer" peut être utilisée pour supprimer définitivement des données du projet.
+
+Pour cela:
+
+1.  Cochez les jeux de données spécifiques que vous souhaitez supprimer dans la colonne "Select" de la table de données disponibles.
+2.  Cliquez sur le bouton "Supprimer définitivement" qui devrait être devenu gris.
+3.  Cliquez une nouvelle fois sur "Supprimer" dans la nouvelle fenêtre qui s'ouvre pour confirmer la suppression.
+
+Veuillez noter que l'action "Supprimer" n'est pas réversible.

@@ -1,0 +1,44 @@
+---
+title: "Appendix 1 - Automatic workflow for the correction of population on barriers"
+other-links:
+  - text: "Version française"
+    href: ../fr/annexe-1-flux-de-travail-automatique-pour-la-correction-de-la-populati.qmd
+    icon: translate
+---
+
+This appendix describes the steps followed inside AccessMod when using the tool "Correct for population on barriers" introduced with version 5.2 of AccessMod. This tool uses GIS GRASS to adjust a population distribution grid (e.g. available from the WorldPop project (<http://www.worldpop.org.uk/>) so that no population falls in "barriers" (as defined through the merged landcover data set). Population falling into barrier pixels are automatically dispatched outside barriers and uniformly distributed over all pixels of the sub-administrative unit.
+
+Before running the tool, it is assumed that the following three layers are already uploaded into AccessMod and that all have the same projection system, extent and resolution as the DEM:
+
+-   Population distribution grid;
+-   The merged land cover distribution grid resulting from the application of the merge land cover module of AccessMod (see section 5.5.2);
+-   Administrative boundaries down to the sub-national level.
+
+Warning: unless the DEM (and consequently also the merged land cover distribution grid) has the same projection system and resolution than the population distribution grid, it is required to re-project and/or re-sample the DEM to match the characteristics of the population grid before importing the first file into the project (see section 5.4.1).
+
+Once the above data is available, the following steps are followed in GRASS (take into account that working in the command line in GRASS requires precise use of spaces before/after certain arguments). Some of the following commands are broken in two lines for clarity, but they are to be run as a complete line each:
+
+1.  First a working, temporary copy, of the shape file with the administrative boundaries is created, to avoid filling the attribute table in the original file with multiple columns if the analysis is repeated: g.copy --overwrite vector=name_of_boundaries_file,temporary_boundaries\
+    \
+2.  The following command is used to obtain a ‘partial’ population grid that masks out the population on barriers (as specified in the merged landcover grid) or on cells outside the area of interest (usually represented by ‘no data’) leaving any other cell with its original population value (quotation marks are not optional):\
+    r.mapcalc --overwrite expression="new_partial_population_file_name = if(isnull(am_merged_land_cover), null(), population_grid_name)"\
+    \
+3.  Next, a new empty column is created in the attribute table of the temporary boundaries vector layer with the following command:\
+    v.db.addcolumn map=temporary_boundaries columns="ratio double precision"\
+    \
+4.  The next two steps create two new columns in the attribute table of the temporary boundaries vector layer, calculating in each case the ‘sum’ of the values of the pixels included in each respective sub-national division. The computation is done in the first command for the complete (un-masked) population and in the second command for the partial (barrier-masked) population. Any ‘column prefix’ can be used, but it will have to be accordingly matched in the next step (5) with the suffix ‘\_sum’:\
+    v.rast.stats map=temporary_boundaries raster=population_grid_name column_prefix=full_pop method=sum\
+    v.rast.stats map=temporary_boundaries raster=partial_population_file_name column_prefix=part_pop method=sum\
+    \
+5.  This step calculates the ratio between the complete (un-masked) population and the partial (barrier-masked) population, for each boundary polygon, and write these ratios in the empty column created in step 3:\
+    v.db.update map=temporary_boundaries layer=1 column=ratio query_column="full_pop_sum/part_pop_sum"\
+    \
+6.  Next, the sub-national boundaries layer is converted into a raster grid using the ‘ratio’ calculated in the previous step as pixel value:\
+    v.to.rast --overwrite input=temporary_boundaries output=rasterized_boundaries use=attr attribute_column=ratio\
+    \
+7.  Finally, the grid of ratios obtained in the previous step is multiplied with the partial (barrier-masked) population grid to proportionally correct for the masked population according to the sub-national boundaries used:\
+    r.mapcalc –overwrite expression="adjusted_population = partial_population_file_name \* rasterized_boundaries"
+
+In practice, this adjustment procedure calculates a ratio of the differences between the unmasked and the masked populations, sums up the population values in the masked pixels (partially outside administrative borders or covered by barriers), and increases proportionally the unmasked pixel values inside the administrative areas where the masked pixels were. This brings the population in the masked population grid to the same total value as the original population.
+
+------------------------------------------------------------------------

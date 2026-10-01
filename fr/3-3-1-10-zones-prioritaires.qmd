@@ -1,0 +1,13 @@
+---
+title: "3.3.1.10. Zones prioritaires"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-10-priority-areas.qmd
+    icon: translate
+---
+
+L'analyse de mise à l'échelle permet de prioriser certaines zones par rapport à d'autres lors de l'identification de l'emplacement le plus approprié pour localiser une nouvelle structure de santé - les zones dites **prioritaires**.
+
+Comme pour les zones d'exclusion (voir la section 3.3.1.5), ces zones peuvent être de nature différente. Elles peuvent, par exemple, être basées sur des statistiques au niveau sous-national pertinents pour l'analyse en cours (par exemple, prévalence d'une maladie, taux de mortalité, niveau de pauvreté).
+
+Quel que soit le type de limite utilisé pour les définir, ces zones doivent être stockées dans une couche au format raster contenant des valeurs entières. Les zones prioritaires définies sur la base d'une couche au format vectoriel doivent être rastérisées à la résolution et l'extension du DEM (voir la section 3.3.1.2) avant d'être importées dans AccessMod.

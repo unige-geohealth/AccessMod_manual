@@ -1,0 +1,21 @@
+---
+title: "3.3.1.2. Modèle numérique d'altitude - Digital Elevation Model (DEM)"
+other-links:
+  - text: "English version"
+    href: ../en/3-3-1-2-digital-elevation-model-dem.qmd
+    icon: translate
+---
+
+Le modèle numérique d'altitude (MNT, ci-après "DEM" pour *Digital Elevation Model*) contient les valeurs d'élévation dans un jeu de données au format raster. Il est important de prendre en compte la topographie du terrain car elle peut influer (de manière positive ou négative) sur la vitesse de déplacement sur une occupation du sol donnée, en fonction du scénario de déplacement. Cela est particulièrement vrai lorsque les patients marchent ou utilisent un vélo pour se rendre dans un établissement de santé.
+
+Dans AccessMod 5, le DEM sert également de grille de référence pour chaque analyse. Il s'agit donc de la couche à fournir lors de la création d'un nouveau projet (voir la section 5.3.2). L'étendue, la projection et la résolution de toutes les autres couches à importer dans le projet seront basées sur le DEM. Il est donc important de porter une attention particulière à cette couche.
+
+Le DEM n’est pas utilisé lors d’une analyse isotrope (c’est-à-dire que les pentes n’ont aucune influence sur la vitesse de déplacement), mais il est obligatoire pour effectuer une analyse anisotrope (c’est-à-dire lorsque les pentes affectent la vitesse supposée du déplacement).
+
+::: callout-warning
+**Les valeurs d'altitude dans le DEM doivent être en mètres! Ce n'est qu'avec les unités de carte exprimées en mètres que les conversions entre les vitesses de déplacement mémorisées dans le tableau de scénario de déplacement (voir section 3.3.2.2), ainsi que le calcul des distances effectivement parcourues, sont correctement effectués.**
+
+**Les cellules "Sans données" (*NoData*) dans le raster DEM sont considérées comme des cellules dans lesquelles le mouvement n'est pas possible. Il est donc recommandé de vérifier que les cellules classées comme telles sont bien limitées et qu’il ne devrait y avoir aucun mouvement. Si nécessaire, ces cellules devront être corrigées manuellement avant d'utiliser le DEM. Veuillez noter que pour naviguer en bateau, au-dessus de la mer, des lacs ou des rivières, il faudra que les zones en question aient une altitude dans le DEM (par exemple, 0 mètre pour le niveau de la mer).**
+
+**Le raster DEM doit également être vérifié pour rechercher des artefacts potentiels (par exemple des collines artificielles) qui pourraient influencer les mouvements.**
+:::

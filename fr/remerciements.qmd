@@ -1,0 +1,17 @@
+---
+title: "Remerciements"
+other-links:
+  - text: "English version"
+    href: ../en/acknowledgements.qmd
+    icon: translate
+---
+
+Nous remercions le Ministère de la Santé du Malawi, ainsi que le "Survey Department of Malawi" qui ont accepté que leurs données puissent être incluses dans le jeu de données qui accompagne le tutoriel d'AccessMod 4 et 5.
+
+Nous remercions Michelle Schmitz et Karin Stenberg pour leur contributions et commentaires avisés sur ce document, ainsi que Yaniss Guigoz, Zeynabou Sy et Carlos Ochoa pour leurs contributions pour le manuel.
+
+AccessMod 5 et les versions précédentes ont été développées grâce au soutien de WHO Department of Health Systems Financing (WHO/HSS/HSF), de l'Université de Genève/GeoHealth group, du AeHIN GIS Lab, du eHealth unit (WHO/IER/KMS/EHL), le département Making Pregnancy Safer (WHO/FCH/MPS), the Networks of Centres of Excellence (GEOIDE), la Faculté de médecine de l'Université de Sherbrooke, et the School of Mathematical and Geospatial Sciences/RMIT University/Melbourne.
+
+UNICEF a contribué aux mises à jour et à la maintenance d'AccessMod 5.x depuis mai 2018.
+
+------------------------------------------------------------------------

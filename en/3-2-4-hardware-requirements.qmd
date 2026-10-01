@@ -1,0 +1,25 @@
+---
+title: "3.2.4. Hardware Requirements"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-2-4-pre-requis-materiel.qmd
+    icon: translate
+---
+
+The minimum and recommended hardware requirements for running the virtual machine are as follow:
+
+**Minimum requirements:**
+
+Memory (RAM): 2 GB
+
+Disk space: 3 GB
+
+Processor: 1-core CPU
+
+**Recommended requirements:**
+
+Memory (RAM): 8 GB
+
+Disk space: 10 GB
+
+Processor: 2-core CPU

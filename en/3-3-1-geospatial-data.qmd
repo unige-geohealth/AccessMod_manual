@@ -1,0 +1,48 @@
+---
+title: "3.3.1. Geospatial data"
+other-links:
+  - text: "Version française"
+    href: ../fr/3-3-1-donnees-geospatiales.qmd
+    icon: translate
+---
+
+This section first cover important issues that needs to be addressed when preparing the geospatial data for its use in AccessMod 5.x (map units, projection and resolution). After that, the different geospatial data sets needed to use AccessMod are described in greater detail.
+
+Unlike in previous versions, the geospatial data imported in AccessMod can be created by different GIS software. The files to be selected during the import process differ depending on the format in which the geospatial data is being stored as reported in the following table:
+
+Table of supported geospatial data formats:
+
+|  |  |  |  |
+|----|----|----|----|
+| **Format** | **Storage mode** | **File extensions** | **Multiple files** |
+| HFA -- ERDAS Imagine | Raster | .img | No |
+| Tagged Image File Format (TIFF) | Raster | .tiff, .tif | No |
+| Shapefile | Vector | .shp,.dbf,.prj,.shx | Yes^1^ |
+| SpatiaLite^2^ | Vector | .sqlite | No |
+| AIG -- Arc/Info Binary Grid | Raster | .adf | Yes^3^ |
+
+^1^ A least the files with extension .shp, .prj, .dbf and .shx. Example: road.shp, road.prj, road.dbf and road.shx
+
+^2^ <https://en.wikipedia.org/wiki/SpatiaLite>
+
+^3^ A least the files with extension .adf. Example: prj.adf, w001001.adf, and hdr.adf
+
+While different file formats can be imported in AccessMod, the format of the geospatial data exported from AccessMod is as follow:
+
+-   Raster format layer: ERDAS Imagine (.img)
+-   Vector format layer: Shapefile (shp,.dbf,.prj,.shx) 
+
+The formats of the exported data can be used in most GIS software currently available on the market.
+
+## In this section
+
+- [3.3.1.1. Units, projection, extent, resolution and accuracy issues](3-3-1-1-units-projection-extent-resolution-and-accuracy-issues.qmd)
+- [3.3.1.2. Digital Elevation Model (DEM)](3-3-1-2-digital-elevation-model-dem.qmd)
+- [3.3.1.3. Population distribution grid](3-3-1-3-population-distribution-grid.qmd)
+- [3.3.1.4. Land cover distribution grid](3-3-1-4-land-cover-distribution-grid.qmd)
+- [3.3.1.5. Exclusion areas](3-3-1-5-exclusion-areas.qmd)
+- [3.3.1.6. Health facilities location](3-3-1-6-health-facilities-location.qmd)
+- [3.3.1.7. Road network](3-3-1-7-road-network.qmd)
+- [3.3.1.8. Barriers to movement](3-3-1-8-barriers-to-movement.qmd)
+- [3.3.1.9. Zones boundaries](3-3-1-9-zones-boundaries.qmd)
+- [3.3.1.10. Priority areas](3-3-1-10-priority-areas.qmd)

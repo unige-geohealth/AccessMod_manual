@@ -1,0 +1,27 @@
+---
+title: "4.1. Installation overview"
+other-links:
+  - text: "Version française"
+    href: ../fr/4-1-apercu-de-l-installation.qmd
+    icon: translate
+---
+
+**AccessMod 5** comes packed inside an image, a "*lightweight, standalone, executable software package that contains everything needed to run an application*." This image is based on Docker, "*an open platform for developing, shipping, and running applications*," and can be deployed either through a virtual machine using **VirtualBox** or directly through **Docker desktop**. The virtual machine is an encapsulated operating system that runs in many operating systems that act as hosts. However, virtualization requires some computing resources, which generally makes AccessMod more efficient when using the image directly in Docker desktop. Nevertheless, the default recommended installation (highlighted below) is the combination of a virtual machine (files`.ova`) and VirtualBox as a virtual machine manager. The description of how to install AccessMod via VirtualBox is described next in [[section 4.2](4-2-installation-process-via-virtualbox.qmd)]{.c-red}. Further descriptions to install and use AccessMod via Docker are described in the [[appendices](appendix-9-installation-and-use-of-accessmod-via-docker-desktop.qmd).]{.c-red}
+
+The following table provides an overview of the platforms to use AccessMod, the computer infrastructures they work with, and the general type of user that might be interested in using them.
+
++--------------+--------------------------------+--------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| User         | Uses                           | AccessMod platform | Computer infrastructure                                     | Tutorial                                                                                    |
++--------------+--------------------------------+--------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| Standard     | Sporadic and/or simple models  | VirtualBox\        | **`.ova`** file for any infrastructure\                     | [Installation process via VirtualBox](4-2-installation-process-via-virtualbox.qmd)          |
+|              |                                | \                  | Specific for VirtualBox installer                           |                                                                                             |
++--------------+--------------------------------+--------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| Intermediate | Frequent and/or complex models | Docker via the\    | **`.exe`** & **`.dmg`** files for Intel Windows & Apple PCs | [Installation of AccessMod via electron launcher](9-2-accessmod-via-electron-launcher.qmd)\ |
+|              |                                | electron launcher  |                                                             | \                                                                                           |
+|              |                                |                    | (Currently) **`.dmg`** **+ update** for M1 Apple PCs        | [Installation of Docker desktop](9-1-installation-of-docker-desktop.qmd)                    |
+|              |                                |                    |                                                             |                                                                                             |
+|              |                                |                    | Specific infrastructure installer for Docker                |                                                                                             |
++--------------+--------------------------------+--------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| Advanced     | Constant and/or\               | Docker via the\    | Any infrastructure\                                         | [Installation of AccessMod via\                                                             |
+|              | very complex models            | command line       | Direct pull from the repository                             | Docker compose (command line)](9-3-accessmod-via-docker-compose-command-line.qmd)           |
++--------------+--------------------------------+--------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------+

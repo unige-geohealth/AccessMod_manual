@@ -1,0 +1,11 @@
+---
+title: "5.4.3. Renommer les données"
+other-links:
+  - text: "English version"
+    href: ../en/5-4-3-rename-the-data.qmd
+    icon: translate
+---
+
+La section «Renommer» vous permet de modifier les tags précédemment entrés directement dans la table. Pour cela, il vous suffit de cliquer sur la cellule en question dans le tableau pour modifier son contenu ou de double-cliquer sur la cellule pour n'en modifier qu'une partie.
+
+Les modifications sont ensuite enregistrées en cliquant sur le bouton "Mettre à jour le(s) tag(s) modifié(s)".
