@@ -405,7 +405,7 @@ for lang in SPACES:
     if os.path.isdir(d):
         shutil.rmtree(d, ignore_errors=True)
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, '_metadata.yml'), 'w').write(f'lang: {lang}\n')
+    open(os.path.join(d, '_metadata.yml'), 'w').write(f'lang: {lang}\nformat-links: false\n')
 for p in pages.values():
     convert(p)
 

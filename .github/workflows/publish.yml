@@ -20,6 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build full-manual PDFs (EN + FR)
+        run: |
+          pip install pyyaml
+          python tools/build_full_pdf.py
       - name: Render Quarto site
         uses: quarto-dev/quarto-actions/render@v2
       - uses: actions/upload-pages-artifact@v3

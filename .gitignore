@@ -11,3 +11,7 @@
 
 # macOS
 .DS_Store
+
+# PDF complets (générés par tools/build_full_pdf.py)
+/pdf/
+/_pdf_build/

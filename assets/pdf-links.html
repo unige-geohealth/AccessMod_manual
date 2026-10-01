@@ -1,0 +1,32 @@
+<!-- PDF buttons: "this page" under the title, "full manual" at the bottom of the left menu.
+     Per-page PDFs are rendered by Quarto (format typst) next to each .html page;
+     full manuals are built by tools/build_full_pdf.py into /pdf/. -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var m = window.location.pathname.match(/\/(en|fr)\/([^\/]*)$/);
+  if (!m) return;                                   // landing page: no PDF
+  var lang = m[1];
+  var page = (m[2] || "index.html").replace(/\.html$/, "");
+  var t = lang === "fr"
+    ? { page: "Télécharger cette page (PDF)", full: "Télécharger le manuel complet (PDF)" }
+    : { page: "Download this page (PDF)", full: "Download the full manual (PDF)" };
+
+  var title = document.querySelector("#title-block-header .quarto-title, header .quarto-title");
+  if (title) {
+    var a = document.createElement("a");
+    a.href = page + ".pdf";
+    a.className = "btn btn-outline-secondary btn-sm pdf-page-btn";
+    a.innerHTML = '<i class="bi bi-file-earmark-pdf"></i> ' + t.page;
+    title.appendChild(a);
+  }
+
+  var sidebar = document.querySelector("#quarto-sidebar .sidebar-menu-container");
+  if (sidebar) {
+    var div = document.createElement("div");
+    div.className = "sidebar-pdf-full";
+    div.innerHTML = '<a class="btn btn-primary btn-sm w-100" href="../pdf/AccessMod_manual_' +
+      lang.toUpperCase() + '.pdf"><i class="bi bi-file-earmark-pdf"></i> ' + t.full + "</a>";
+    sidebar.appendChild(div);
+  }
+});
+</script>

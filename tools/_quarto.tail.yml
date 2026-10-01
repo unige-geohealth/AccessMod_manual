@@ -7,3 +7,12 @@ format:
     number-sections: false
     fig-align: center
     link-external-newwindow: true
+    include-after-body: assets/pdf-links.html
+  typst:
+    papersize: a4
+    margin:
+      x: 2cm
+      y: 2cm
+    fontsize: 10pt
+    filters:
+      - tools/typst-autowidth.lua

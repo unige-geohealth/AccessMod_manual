@@ -34,6 +34,17 @@ Chaque push sur `main` déclenche `.github/workflows/publish.yml`, qui génère 
 sur GitHub Pages : <https://unige-geohealth.github.io/AccessMod_manual/>.
 Suivi des publications : onglet **Actions** du dépôt.
 
+## Export PDF
+
+- **Une page** : bouton « Télécharger cette page (PDF) » sous le titre. Quarto génère un PDF
+  (format Typst) à côté de chaque page HTML lors du rendu.
+- **Manuel complet** : bouton en bas du menu de gauche, dans la langue de la page.
+  Les deux PDF (`pdf/AccessMod_manual_EN.pdf`, `pdf/AccessMod_manual_FR.pdf`) sont assemblés par
+  `tools/build_full_pdf.py` en suivant l'ordre des barres latérales de `_quarto.yml`.
+  En local : `python3 tools/build_full_pdf.py` (nécessite PyYAML), avant `quarto render`.
+- Les boutons sont ajoutés par `assets/pdf-links.html` ; la largeur des colonnes des tableaux
+  dans les PDF est calculée par `tools/typst-autowidth.lua`.
+
 ## Relancer la conversion depuis Confluence (optionnel)
 
 ⚠️ Cela écrase `en/`, `fr/` et `_quarto.yml`. À ne faire que tant que le contenu n'a pas
